@@ -1,6 +1,6 @@
 {
   "name": "Deutsche Bahn (DB)",
-  "type": "hafas_mgate_deutschebahn",
+  "type": "hafas_query",
   "supportedLanguages": [
     "en",
     "de",
@@ -8,18 +8,7 @@
     "es"
   ],
   "options": {
-    "auth": {
-      "aid": "n91dB8Z77MLdoR0K"
-    },
-    "checksumSalt": "6264493855566A34304B356676787766",
-    "client": {
-      "id": "DB",
-      "name": "DB Navigator",
-      "type": "AND",
-      "v": 19040000
-    },
-    "endpoint": "https://reiseauskunft.bahn.de/bin/mgate.exe",
-    "ext": "DB.R19.12.a",
+    "endpoint": "https://reiseauskunft.bahn.de/bin/trainsearch.exe/",
     "lineModeMap": {
       "1": "Long-distance train (ICE)",
       "128": "Metro",
@@ -53,7 +42,6 @@
       87,
       88
     ],
-    "standardLocationIdentifierType": "ibnr",
-    "version": "1.18"
+    "standardLocationIdentifierType": "ibnr"
   }
 }
