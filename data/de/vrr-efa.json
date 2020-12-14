@@ -1,0 +1,11 @@
+{
+	"name": "Verkehrsverbund Rhein-Ruhr (VRR)",
+	"type": "efa",
+	"supportedLanguages": [
+		"en",
+		"de"
+	],
+	"options": {
+		"endpoint": "https://efa.vrr.de/standard/"
+	}
+}
