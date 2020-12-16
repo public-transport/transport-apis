@@ -1,6 +1,8 @@
 {
 	"name": "Verkehrsverbund Rhein-Ruhr (VRR)",
-	"type": "efa",
+	"type": {
+		"efa": true
+	},
 	"supportedLanguages": [
 		"en",
 		"de"

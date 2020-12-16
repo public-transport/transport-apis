@@ -1,6 +1,8 @@
 {
   "name": "Deutsche Bahn (DB)",
-  "type": "hafas_mgate_deutschebahn",
+  "type": {
+    "hafasMgate": true
+  },
   "supportedLanguages": [
     "en",
     "de",

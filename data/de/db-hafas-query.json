@@ -1,6 +1,8 @@
 {
   "name": "Deutsche Bahn (DB)",
-  "type": "hafas_query",
+  "type": {
+    "hafasQuery": true
+  },
   "supportedLanguages": [
     "en",
     "de",
