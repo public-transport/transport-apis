@@ -10,7 +10,7 @@
     "es"
   ],
   "options": {
-    "endpoint": "https://reiseauskunft.bahn.de/bin/trainsearch.exe/",
+    "endpoint": "https://reiseauskunft.bahn.de/bin/",
     "lineModeMap": {
       "1": "Long-distance train (ICE)",
       "128": "Metro",
