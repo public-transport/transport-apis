@@ -7,7 +7,14 @@
 
 ### Overall Structure
 
-There is a single JSON file per API endpoint.
+There is a single JSON file per API endpoint. It must contain the following
+properties:
+
+* `name`: endpoint name
+* `type`: endpoint protocol description (see below)
+* `supportedLanguages`: list of supported languages (see below)
+* `coverage`: the geographic area this endpoint provides results for (see below)
+* `options`: protocol-specific options (not specified here)
 
 ### Endpoint Protocol
 
@@ -26,6 +33,22 @@ Known protocols:
 * `navitia`
 * `otpGraphQl`
 * `otpRest`
+
+### Supported Languages
+
+```json
+{
+    "supportedLanguages": [
+        "en",
+        "de",
+        "fr",
+        "es"
+    ]
+}
+```
+
+A list of ISO-639-1 language codes describing the languages supported by the
+endpoint.
 
 ### Coverage Information
 
