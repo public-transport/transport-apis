@@ -18,7 +18,7 @@ properties:
 
 ### Endpoint Protocol
 
-```json
+```js
 {
     "type": {
         "hafasMgate": true
@@ -36,7 +36,7 @@ Known protocols:
 
 ### Supported Languages
 
-```json
+```js
 {
     "supportedLanguages": [
         "en",
@@ -54,12 +54,12 @@ endpoint.
 
 Describes the geographic area this endpoint provides results for.
 
-```json
+```js
 {
     "coverage": {
-        "realtimeCoverage": { ... },
-        "regularCoverage": { ... },
-        "anyCoverage": { ... }
+        "realtimeCoverage": { /* ... */ },
+        "regularCoverage": { /* ... */ },
+        "anyCoverage": { /* ... */ }
     }
 }
 ```
@@ -76,10 +76,10 @@ You could say that this is the extent to which, in a region, the API provides an
 
 At least one coverage category must be provided.
 
-```json
+```js
 {
-    "area": { GeoJSON polygon },
-    "region": [ ISO-3166-1/2 codes ]
+    "area": { /* GeoJSON polygon */ },
+    "region": [ /* ISO-3166-1/2 codes */ ]
 }
 ```
 
