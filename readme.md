@@ -89,6 +89,36 @@ The following properties are defined for each coverage category:
 
 Both fields should be provided.
 
+### Protocol Specific Options
+
+#### Hafas mgate.exe
+
+```js
+"options": {
+    "auth": {
+        "aid": "...",
+        ...
+    },
+    "checksumSalt": "<hex value>",
+    "client": {
+        "id": "...",
+        "type": "...",
+        ...
+    },
+    "ext": "...",
+    "micMacSalt": "<hex value>",
+    "version": "1.27"
+}
+```
+
+The following properties are defined:
+* `auth`: JSON object with static authentication information as passed verbatim in Hafas requests. Mandatory for all known endpoints.
+* `checksumSalt`: A string containing a hexadecimal representation of the checksum salt. Mandatory for endpoints using this mechanism.
+* `client`: JSON object with static client information passed verbatim in Hafas requests.
+* `ext`: String with the extension version (?) included in Hafas request.
+* `micMacSalt`: A string containing a hexadecimal representation of the mic/mac checksum salt. Mandatory for endpoints using this mechanism.
+* `version`: String containing the requested Hafas API version (?), mandatory for all known endpoints.
+
 ## Contributing
 
 Note that, by participating in this project, you commit to the [code of conduct](code-of-conduct.md). If you want to contribute to this list, feel free to open an Issue at the [Issues page](https://github.com/public-transport/european-transport-operators/issues).
