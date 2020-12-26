@@ -113,10 +113,10 @@ Both fields should be provided.
 
 The following properties are defined:
 * `auth`: JSON object with static authentication information as passed verbatim in Hafas requests. Mandatory for all known endpoints.
-* `checksumSalt`: A string containing a hexadecimal representation of the checksum salt. Mandatory for endpoints using this mechanism.
+* `checksumSalt`: A string containing a hexadecimal representation of the salt to hash the request body with. Mandatory for endpoints using this authentication mechanism.
 * `client`: JSON object with static client information passed verbatim in Hafas requests.
 * `ext`: String with the extension version (?) included in Hafas request.
-* `micMacSalt`: A string containing a hexadecimal representation of the mic/mac checksum salt. Mandatory for endpoints using this mechanism.
+* `micMacSalt`: A string containing a hexadecimal representation the salt to hash the hashed request body with. Mandatory for endpoints using this authentication mechanism.
 * `version`: String containing the requested Hafas API version (?), mandatory for all known endpoints.
 
 ## Contributing
