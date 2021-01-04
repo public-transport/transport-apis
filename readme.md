@@ -89,6 +89,24 @@ The following properties are defined for each coverage category:
 
 Both fields should be provided.
 
+### Attribution Information
+
+License and copyright attribution data for endpoints providing results under an Open Data license. This generally follows the [Data Packages format](https://dataprotocols.org/data-packages/).
+
+```js
+{
+    "attribution": {
+        "name": "© Helsinki Region Transport",
+        "license": "CC-BY-4.0",
+        "homepage": "https://www.hsl.fi/"
+    }
+}
+```
+
+Properties:
+* `license`: An [Open Definition license ID](https://licenses.opendefinition.org/) or a [SPDX license id](https://spdx.org/licenses/).
+* `name` and `homepage`: The entity to attribute for licenses requiring this.
+
 ### Protocol Specific Options
 
 #### Hafas mgate.exe
