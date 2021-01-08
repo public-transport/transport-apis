@@ -50,6 +50,19 @@ Known protocols:
 A list of ISO-639-1 language codes describing the languages supported by the
 endpoint.
 
+### Timezone Information
+
+```js
+{
+    "timezone": "Europe/Berlin"
+}
+```
+
+For endpoints that assume times in requests to be in a specific local timezone, the `timezone` field
+should contain the [IANA timezone identifier](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) of the
+expected timezone. This timezone can also be applied by clients to times in results returned by the endpoint,
+particularly when the results are lacking explicit timezone information.
+
 ### Coverage Information
 
 Describes the geographic area this endpoint provides results for.
