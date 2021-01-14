@@ -17,7 +17,14 @@
     "type": {
       "type": "object",
       "propertyNames": {
-        "pattern": "^(efa|hafasMgate|hafasQuery|navitia|otpGraphQl|otpRest)$"
+        "enum": [
+          "efa",
+          "hafasMgate",
+          "hafasQuery",
+          "navitia",
+          "otpGraphQl",
+          "otpRest"
+        ]
       },
       "additionalProperties": {
         "type": "boolean"
