@@ -91,7 +91,9 @@ Both fields should be provided.
 
 ### Attribution Information
 
-License and copyright attribution data for endpoints providing results under an Open Data license. This generally follows the [Data Packages format](https://dataprotocols.org/data-packages/).
+If an endpoint provides result under an Open Data license, it should contain an
+`attribution` property which describes the license and copyright information.
+This generally follows the [Data Packages format](https://dataprotocols.org/data-packages/).
 
 ```js
 {
@@ -104,7 +106,7 @@ License and copyright attribution data for endpoints providing results under an 
 ```
 
 Properties:
-* `license`: An [Open Definition license ID](https://licenses.opendefinition.org/) or a [SPDX license id](https://spdx.org/licenses/).
+* `license`: An [Open Definition license ID](https://licenses.opendefinition.org/) or an [SPDX license id](https://spdx.org/licenses/).
 * `name` and `homepage`: The entity to attribute for licenses requiring this.
 
 ### Protocol Specific Options
