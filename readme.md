@@ -104,7 +104,7 @@ Both fields should be provided.
 
 ### Attribution Information
 
-If an endpoint provides result under an Open Data license, it should contain an
+If an endpoint provides results under an Open Data license, it should contain an
 `attribution` property which describes the license and copyright information.
 This generally follows the [Data Packages format](https://dataprotocols.org/data-packages/).
 
