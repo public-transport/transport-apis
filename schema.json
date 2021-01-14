@@ -1,5 +1,5 @@
 {
-  "$id": "https://raw.githubusercontent.com/public-transport/transport-apis/v1/schema.json",
+  "$id": "https://raw.githubusercontent.com/public-transport/transport-apis/v1/schema.json#",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "public transport API description",
   "type": "object",
@@ -55,9 +55,37 @@
     "coverage": {
       "$id": "#coverage",
       "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
       "properties": {
-        "area": {
-      "type": "object"
+        "type": {
+          "type": "string",
+          "enum": [
+            "Polygon"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 4,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "number"
+          }
         }
       }
     }
