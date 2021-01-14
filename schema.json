@@ -1,0 +1,65 @@
+{
+  "$id": "https://raw.githubusercontent.com/public-transport/transport-apis/v1/schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "public transport API description",
+  "type": "object",
+  "required": [
+    "name",
+    "type",
+    "supportedLanguages",
+    "coverage",
+    "options"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^(efa|hafasMgate|hafasQuery|navitia|otpGraphQl|otpRest)$"
+      },
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "supportedLanguages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z]$",
+        "description": "ISO-639-1 language code"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "realtimeCoverage": {
+          "$ref": "#coverage"
+        },
+        "regularCoverage": {
+          "$ref": "#coverage"
+        },
+        "anyCoverage": {
+          "$ref": "#coverage"
+        }
+      }
+    },
+    "options": {
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "coverage": {
+      "$id": "#coverage",
+      "type": "object",
+      "properties": {
+        "area": {
+      "type": "object"
+        }
+      }
+    }
+  }
+}
