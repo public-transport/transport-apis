@@ -56,22 +56,10 @@
     },
     "attribution": {
       "type": "object",
-      "required": [
-        "license",
-        "name"
-      ],
-      "properties": {
-        "license": {
-          "type": "string",
-          "description": "Open Definition license ID or SPDX license id"
-        },
-        "name": {
-          "type": "string"
-        },
-        "homepage": {
-          "type": "string"
-        }
-      }
+      "oneOf": [
+        { "$ref": "#/definitions/attribution_opendata" },
+        { "$ref": "#/definitions/attribution_proprietary" }
+      ]
     },
     "options": {
       "type": "object"
@@ -112,6 +100,36 @@
           "items": {
             "type": "number"
           }
+        }
+      }
+    },
+    "attribution_opendata": {
+      "type": "object",
+      "required": [
+        "license",
+        "name"
+      ],
+      "properties": {
+        "license": {
+          "type": "string",
+          "description": "Open Definition license ID or SPDX license id"
+        },
+        "name": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string"
+        }
+      }
+    },
+    "attribution_proprietary": {
+      "type": "object",
+      "required": [
+        "isProprietary"
+      ],
+      "properties": {
+        "isProprietary": {
+          "type": "boolean"
         }
       }
     }
