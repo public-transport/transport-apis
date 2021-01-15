@@ -91,9 +91,13 @@ Both fields should be provided.
 
 ### Attribution Information
 
-If an endpoint provides results under an Open Data license, it should contain an
-`attribution` property which describes the license and copyright information.
-This generally follows the [Data Packages format](https://dataprotocols.org/data-packages/).
+The `attribution` property specifies licensing information for an endpoint.
+
+#### Open Data
+
+If an endpoint provides results under an Open Data license, `attribution`
+generally follows the [Data Packages
+format](https://dataprotocols.org/data-packages/):
 
 ```js
 {
@@ -108,6 +112,21 @@ This generally follows the [Data Packages format](https://dataprotocols.org/data
 Properties:
 * `license`: An [Open Definition license ID](https://licenses.opendefinition.org/) or an [SPDX license id](https://spdx.org/licenses/).
 * `name` and `homepage`: The entity to attribute for licenses requiring this.
+
+name and license are mandatory, homepage is optional.
+
+#### Proprietary
+
+If an endpoint is known to be proprietary, `attribution` can be used to specify
+this as well:
+
+```js
+{
+    "attribution": {
+        "isProprietary": true
+    }
+}
+```
 
 ### Protocol Specific Options
 
