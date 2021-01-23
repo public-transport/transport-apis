@@ -1,0 +1,36 @@
+{
+    "name": "Verkehrsverbund Ostregion (VOR)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 14.3352, 47.9871 ], [ 16.2767, 46.6744 ], [ 17.574, 48.5545 ], [ 14.9609, 49.2139 ], [ 14.3352, 47.9871 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "AT-3", "AT-9" ]
+        }
+    },
+    "options": {
+        "auth": {
+            "aid": "and20201hf7mcf9bv3nv8g5f",
+            "pw": "87a6f8ZbnBih32",
+            "type": "USER",
+            "user": "mobile"
+        },
+        "client": {
+            "id": "VAO",
+            "l": "vs_vor",
+            "type": "AND"
+        },
+        "endpoint": "https://anachb.vor.at/bin/mgate.exe",
+        "ext": "VAO.11",
+        "micMacSalt": "6633673735743766726667323938336a",
+        "ver": "1.27"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "timezone": "Europe/Vienna",
+    "type": {
+        "hafasMgate": true
+    }
+}

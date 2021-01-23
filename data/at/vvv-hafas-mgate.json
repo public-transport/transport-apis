@@ -1,0 +1,36 @@
+{
+    "name": "Verkehrsverbund Vorarlberg (VVV)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 9.5377, 47.5847 ], [ 10.2702, 47.6116 ], [ 10.1613, 46.8297 ], [ 9.4614, 47.0601 ], [ 9.5377, 47.5847 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "AT-8" ]
+        }
+    },
+    "options": {
+        "auth": {
+            "aid": "and20201hf7mcf9bv3nv8g5f",
+            "pw": "87a6f8ZbnBih32",
+            "type": "USER",
+            "user": "mobile"
+        },
+        "client": {
+            "id": "VAO",
+            "l": "vs_vvv",
+            "type": "AND"
+        },
+        "endpoint": "https://fahrplan.vmobil.at/bin/mgate.exe",
+        "ext": "VAO.11",
+        "micMacSalt": "6633673735743766726667323938336A",
+        "ver": "1.27"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "timezone": "Europe/Vienna",
+    "type": {
+        "hafasMgate": true
+    }
+}

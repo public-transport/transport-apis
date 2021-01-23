@@ -1,0 +1,36 @@
+{
+    "name": "Oberösterreichischer Verkehrsverbund (OÖVV)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 12.6675, 48.0845 ], [ 13.6613, 48.8819 ], [ 15.4156, 48.3973 ], [ 13.9864, 47.1644 ], [ 12.6675, 48.0845 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "AT-4" ]
+        }
+    },
+    "options": {
+        "auth": {
+            "aid": "and20201hf7mcf9bv3nv8g5f",
+            "pw": "87a6f8ZbnBih32",
+            "type": "USER",
+            "user": "mobile"
+        },
+        "client": {
+            "id": "VAO",
+            "l": "vs_ooevv",
+            "type": "AND"
+        },
+        "endpoint": "https://app.verkehrsauskunft.at/bin/mgate.exe",
+        "ext": "VAO.11",
+        "micMacSalt": "6633673735743766726667323938336A",
+        "ver": "1.27"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "timezone": "Europe/Vienna",
+    "type": {
+        "hafasMgate": true
+    }
+}
