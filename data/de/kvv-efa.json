@@ -1,0 +1,23 @@
+{
+    "name": "Karlsruher Verkehrsverbund (KVV)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 8.0198, 49.188 ], [ 8.7412, 49.075 ], [ 8.4674, 48.21467 ], [ 7.6201, 48.358 ], [ 8.0198, 49.188 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [
+                "DE-BW"
+            ]
+        }
+    },
+    "options": {
+        "endpoint": "https://projekte.kvv-efa.de/sl3/"
+    },
+    "supportedLanguages": [ "en", "de" ],
+    "type": {
+        "efa": true
+    }
+}

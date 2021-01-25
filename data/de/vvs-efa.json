@@ -1,0 +1,21 @@
+{
+    "name": "Verkehrs- und Tarifverbund Stuttgart (VVS)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 8.7321, 49.0652 ], [ 9.7062, 48.9949 ], [ 9.6861, 48.2417 ], [ 8.4509, 48.2551 ], [ 8.7321, 49.0652 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-BW" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://www2.vvs.de/vvs/"
+    },
+    "supportedLanguages": [ "en", "de" ],
+    "type": {
+        "efa": true
+    }
+}
