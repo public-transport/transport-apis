@@ -67,7 +67,19 @@
   },
   "definitions": {
     "coverage": {
-      "$id": "#/definitions/coverage",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "area": {
+          "$ref": "#/definitions/coverage_geojson"
+        },
+        "region": {
+          "$ref": "#/definitions/coverage_region"
+        }
+      }
+    },
+    "coverage_geojson": {
       "type": "object",
       "required": [
         "type",
@@ -102,6 +114,15 @@
           }
         }
       }
+    },
+    "coverage_region": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-zA-Z][a-zA-Z](-[a-zA-Z][a-zA-Z])?$",
+        "description": "ISO-3166-1/2 country/region code"
+      },
+      "minItems": 1
     },
     "attribution_opendata": {
       "type": "object",
