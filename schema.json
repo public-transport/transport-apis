@@ -119,7 +119,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^[a-zA-Z][a-zA-Z](-[a-zA-Z][a-zA-Z])?$",
+        "pattern": "^[A-Z]{2}(-[A-Z0-9]{1,5})?$",
         "description": "ISO-3166-1/2 country/region code"
       },
       "minItems": 1
