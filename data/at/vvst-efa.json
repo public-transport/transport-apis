@@ -1,0 +1,23 @@
+{
+    "name": "Verkehrsverbund Steiermark (VVSt)",
+    "coverage": {
+        "regularCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 13.4446, 47.7198 ], [ 16.1595, 47.8887 ], [ 16.1309, 46.6204 ], [ 13.8844, 46.5981 ], [ 13.4446, 47.7198 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "AT-6" ]
+        }
+    },
+    "options": {
+        "compactXmlRepsonse": true,
+        "endpoint": "http://appefa10.verbundlinie.at/android/"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "timezone": "Europe/Vienna",
+    "type": {
+        "efa": true
+    }
+}

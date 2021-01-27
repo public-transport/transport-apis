@@ -1,0 +1,22 @@
+{
+    "name": "Linz AG",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 14.1792, 48.3923 ], [ 14.4991, 48.41236 ], [ 14.5091, 48.179 ], [ 14.1892, 48.1257 ], [ 14.1792, 48.3923 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "AT-4" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://www.linzag.at/linz2/"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "timezone": "Europe/Vienna",
+    "type": {
+        "efa": true
+    }
+}
