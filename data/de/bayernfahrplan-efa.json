@@ -1,0 +1,22 @@
+{
+    "name": "Bayern Fahrplan",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 8.7591, 50.5296 ], [ 12.872, 50.66655 ], [ 14.3451, 47.6552 ], [ 9.9063, 46.9968 ], [ 8.7591, 50.5296 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-BY" ]
+        }
+    },
+    "options": {
+        "compactXmlRepsonse": true,
+        "endpoint": "https://mobile.defas-fgi.de/beg/"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "type": {
+        "efa": true
+    }
+}

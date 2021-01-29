@@ -1,0 +1,22 @@
+{
+    "name": "Münchener Verkehrs- und Tarifverbund (MVV)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 10.7372, 48.5128 ], [ 11.1456, 47.7161 ], [ 12.6185, 48.1111 ], [ 12.0896, 48.8074 ], [ 10.7372, 48.5128 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-BY" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://efa.mvv-muenchen.de/mobile/"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "timezone": "Europe/Berlin",
+    "type": {
+        "efa": true
+    }
+}
