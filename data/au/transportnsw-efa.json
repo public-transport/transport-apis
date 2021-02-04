@@ -1,0 +1,22 @@
+{
+    "name": "Transport for NSW",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 140.8182, -28.7755 ], [ 154.2714, -27.9933 ], [ 151.0906, -39.5172 ], [ 140.766, -34.2506 ], [ 140.8182, -28.7755 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "AU-NSW" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://transportnsw.info/web/"
+    },
+    "supportedLanguages": [ "en" ],
+    "timezone": "Australia/Sydney",
+    "type": {
+        "efa": true
+    }
+}
