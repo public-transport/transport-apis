@@ -159,7 +159,7 @@ this as well:
     },
     "ext": "...",
     "micMacSalt": "<hex value>",
-    "version": "1.27"
+    "ver": "1.27"
 }
 ```
 
@@ -169,7 +169,7 @@ The following properties are defined:
 * `client`: JSON object with static client information passed verbatim in Hafas requests.
 * `ext`: String with the extension version (?) included in Hafas request.
 * `micMacSalt`: A string containing a hexadecimal representation the salt to hash the hashed request body with. Mandatory for endpoints using this authentication mechanism.
-* `version`: String containing the requested Hafas API version (?), mandatory for all known endpoints.
+* `ver`: String containing the requested Hafas API version (?), mandatory for all known endpoints.
 
 ## Contributing
 
