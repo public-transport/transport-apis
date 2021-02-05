@@ -3,6 +3,17 @@
 	"type": {
 		"efa": true
 	},
+	"coverage": {
+		"realtimeCoverage": {
+			"area": {
+				"coordinates": [
+					[ [ 5.8835, 51.9055 ], [ 6.0496, 51.111 ], [ 7.6174, 50.9833 ], [ 7.6207, 51.79 ], [ 5.8835, 51.9055 ] ]
+				],
+				"type": "Polygon"
+			},
+			"region": [ "DE-NW" ]
+		}
+	},
 	"supportedLanguages": [
 		"en",
 		"de"
