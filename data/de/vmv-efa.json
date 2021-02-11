@@ -1,0 +1,22 @@
+{
+    "name": "Verkehrsgesellschaft Mecklenburg-Vorpommern (VMV)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 10.7879, 54.1154 ], [ 10.5114, 53.0571 ], [ 14.4201, 53.1954 ], [ 14.0957, 54.9238 ], [ 10.7879, 54.1154 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-MV" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://fahrplanauskunft-mv.de/vmv3/"
+    },
+    "supportedLanguages": [ "en", "de" ],
+    "timezone": "Europe/Berlin",
+    "type": {
+        "efa": true
+    }
+}
