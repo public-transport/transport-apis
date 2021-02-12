@@ -190,6 +190,29 @@ Product metadata consists of the following information:
 * `name`: A human-readable label for the product, as used by the operator.
 * `bitmasks`: An array of integer values of bit values used by Hafas for this product.
 
+#### EFA
+
+``` js
+"options": {
+    "endpoint": "https://...",
+    "supportedOutputFormats": [ "XML", "JSON" ],
+    "xmlOutputFormat": "full",
+    "mId": "...",
+    "stopfinderRequestCommand": "XSLT_STOPFINDER_REQUEST",
+    "dmRequestCommand": "XSLT_DM_REQUEST",
+    "tripRequestCommand": "XSLT_TRIP_REQUEST2"
+}
+```
+
+The following properties are defined:
+* `endpoint`: Base URL for EFA requests, mandatory.
+* `supportedOutputFormats`: an array of strings containing valid arguments to the outputFormat parameter of an EFA query (`XML` and/or `JSON`).
+* `xmlOutputFormat`: a string specifying the XML output format variant, either `full` or `compact`.
+* `mId`: Value of the `mId` query argument. Omitted if not set.
+* `stopfinderRequestCommand`: The command used for stop finder requests (default: `XML_STOPFINDER_REQUEST`).
+* `dmRequestCommand`: The command used for departure monitor requests (defautl: `XML_DM_REQUEST`).
+* `tripRequestCommand`: The command used for trip requests (default: `XML_TRIP_REQUEST2`).
+
 ## Contributing
 
 Note that, by participating in this project, you commit to the [code of conduct](code-of-conduct.md). If you want to contribute to this list, feel free to open an Issue at the [Issues page](https://github.com/public-transport/european-transport-operators/issues).
