@@ -171,6 +171,29 @@ The following properties are defined:
 * `micMacSalt`: A string containing a hexadecimal representation the salt to hash the hashed request body with. Mandatory for endpoints using this authentication mechanism.
 * `version`: String containing the requested Hafas API version (?), mandatory for all known endpoints.
 
+#### EFA
+
+``` js
+"options": {
+    "endpoint": "https://...",
+    "supportedOutputFormats": [ "XML", "JSON" ],
+    "xmlOutputFormat": "full",
+    "mId": "...",
+    "stopfinderRequestCommand": "XSLT_STOPFINDER_REQUEST",
+    "dmRequestCommand": "XSLT_DM_REQUEST",
+    "tripRequestCommand": "XSLT_TRIP_REQUEST2"
+}
+```
+
+The following properties are defined:
+* `endpoint`: Base URL for EFA requests, mandatory.
+* `supportedOutputFormats`: an array of strings containing valid arguments to the outputFormat parameter of an EFA query (`XML` and/or `JSON`).
+* `xmlOutputFormat`: a string specifying the XML output format variant, either `full` or `compact`.
+* `mId`: Value of the `mId` query argument. Omitted if not set.
+* `stopfinderRequestCommand`: The command used for stop finder requests (default: `XML_STOPFINDER_REQUEST`).
+* `dmRequestCommand`: The command used for departure monitor requests (defautl: `XML_DM_REQUEST`).
+* `tripRequestCommand`: The command used for trip requests (default: `XML_TRIP_REQUEST2`).
+
 ## Contributing
 
 Note that, by participating in this project, you commit to the [code of conduct](code-of-conduct.md). If you want to contribute to this list, feel free to open an Issue at the [Issues page](https://github.com/public-transport/european-transport-operators/issues).
