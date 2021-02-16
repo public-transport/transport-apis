@@ -1,0 +1,22 @@
+{
+    "name": "Nederlandse Spoorwegen (NS)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 3.169, 51.273 ], [ 6.13, 50.612 ], [ 7.73, 53.462 ], [ 5.29, 53.891 ], [ 3.169, 51.273 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "NL" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://hafas.bene-system.com/bin/"
+    },
+    "supportedLanguages": [ "de", "en", "fr", "nl" ],
+    "timezone": "Europe/Amsterdam",
+    "type": {
+        "hafasQuery": true
+    }
+}
