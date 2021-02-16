@@ -1,0 +1,77 @@
+{
+  "name": "Société Nationale des Chemins de Fer Luxembourgeois (CFL)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "fr",
+    "en",
+    "de"
+  ],
+  "timezone": "Europe/Luxembourg",
+  "attribution": {
+    "name": "Société Nationale des Chemins de Fer Luxembourgeois",
+    "homepage": "https://www.cfl.lu/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["LU"]
+    },
+    "anyCoverage": {
+      "region": ["NL", "DK", "DE", "PL", "CZ", "AT", "IT", "CH", "FR", "BE"]
+    }
+  },
+  "options": {
+    "endpoint": "https://horaires.cfl.lu/bin/mgate.exe",
+    "client": {
+      "type": "IPH",
+      "id": "HAFAS",
+      "v": "4000000",
+      "name": "cflPROD-STORE",
+      "os": "iPhone OS 9.3.5"
+    },
+    "ver": "1.16",
+    "auth": {
+      "aid": "ALT2vl7LAFDFu2dz"
+    },
+    "lang": "de",
+    "products": [
+      {
+        "id": "long-distance-train-1",
+        "bitmask": 1,
+        "name": "TGV, ICE, EuroCity"
+      },
+      {
+        "id": "long-distance-train-2",
+        "bitmask": 2,
+        "name": "TGV, ICE, EuroCity"
+      },
+      {
+        "id": "local-train-1",
+        "bitmask": 8,
+        "name": "local trains"
+      },
+      {
+        "id": "local-train-2",
+        "bitmask": 16,
+        "name": "local trains"
+      },
+      {
+        "id": "bus",
+        "bitmask": 32,
+        "name": "bus"
+      },
+      {
+        "id": "tram",
+        "bitmask": 256,
+        "name": "tram"
+      },
+      {
+        "id": "funicular",
+        "bitmask": 512,
+        "name": "Fun"
+      }
+    ]
+  }
+}
