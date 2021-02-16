@@ -1,0 +1,72 @@
+{
+  "name": "mobilitéits zentral (mobiliteit.lu)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de",
+    "en",
+    "fr"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "Verkéiersverbond",
+    "homepage": "https://www.mobiliteit.lu/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["LU"]
+    },
+    "anyCoverage": {
+      "region": ["NL", "DE", "CH", "FR", "BE"]
+    }
+  },
+  "options": {
+    "endpoint": "https://cdt.hafas.de/bin/mgate.exe",
+    "client": {
+      "type": "WEB",
+      "id": "MMILUX",
+      "name": "webapp",
+      "l": "vs_webapp"
+    },
+    "ver": "1.25",
+    "auth": {
+      "type": "AID",
+      "aid": "SkC81GuwuzL4e0"
+    },
+    "lang": "de",
+    "products": [
+      {
+        "id": "express-train",
+        "bitmask": 1,
+        "name": "local train (TGV/ICE)"
+      },
+      {
+        "id": "national-train-1",
+        "bitmask": 2,
+        "name": "national train (IC/RE/IRE)"
+      },
+      {
+        "id": "national-train-2",
+        "bitmask": 4,
+        "name": "national train (IC/RE/IRE)"
+      },
+      {
+        "id": "local-train",
+        "bitmask": 8,
+        "name": "local train (RB/TER)"
+      },
+      {
+        "id": "bus",
+        "bitmask": 32,
+        "name": "Bus"
+      },
+      {
+        "id": "tram",
+        "bitmask": 256,
+        "name": "Tram"
+      }
+    ]
+  }
+}
