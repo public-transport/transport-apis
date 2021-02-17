@@ -1,0 +1,79 @@
+{
+  "name": "Verkehrsverbund Berlin-Brandenburg (VBB)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de",
+    "en"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "VBB Verkehrsverbund Berlin-Brandenburg GmbH",
+    "homepage": "https://www.vbb.de/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["DE-BE", "DE-BB"]
+    },
+    "regularCoverage": {
+      "region": ["DE"]
+    },
+    "anyCoverage": {
+      "region": ["PL", "CZ"]
+    }
+  },
+  "options": {
+    "endpoint": "https://fahrinfo.vbb.de/bin/mgate.exe",
+    "client": {
+      "type": "IPA",
+      "id": "VBB",
+      "name": "vbbPROD",
+      "v": "4010300"
+    },
+    "ext": "VBB.1",
+    "ver": "1.16",
+    "auth": {
+      "type": "AID",
+      "aid": "hafas-vbb-apps"
+    },
+    "products": [
+      {
+        "id": "suburban",
+        "bitmasks": [1],
+        "name": "S-Bahn"
+      },
+      {
+        "id": "subway",
+        "bitmasks": [2],
+        "name": "U-Bahn"
+      },
+      {
+        "id": "tram",
+        "bitmasks": [4],
+        "name": "Tram"
+      },
+      {
+        "id": "bus",
+        "bitmasks": [8],
+        "name": "Bus"
+      },
+      {
+        "id": "ferry",
+        "bitmasks": [16],
+        "name": "Fähre"
+      },
+      {
+        "id": "express",
+        "bitmasks": [32],
+        "name": "IC/ICE"
+      },
+      {
+        "id": "regional",
+        "bitmasks": [64],
+        "name": "RB/RE"
+      }
+    ]
+  }
+}
