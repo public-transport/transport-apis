@@ -1,0 +1,103 @@
+{
+  "name": "Österreichische Bundesbahnen (ÖBB)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de"
+  ],
+  "timezone": "Europe/Vienna",
+  "attribution": {
+    "name": "ÖBB-Personenverkehr AG",
+    "license": "todo",
+    "homepage": "https://www.oebb.at/"
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["AT"]
+    },
+    "regularCoverage": {
+      "region": ["CH", "LI", "DE", "IT", "SI", "HU", "SK", "CZ", "FR", "BE", "LU"]
+    },
+    "anyCoverage": {
+      "region": ["NL"]
+    }
+  },
+  "options": {
+    "endpoint": "http://fahrplan.oebb.at/bin/mgate.exe",
+    "client": {
+      "type": "IPA",
+      "id": "OEBB",
+      "v": "6000500",
+      "name": "oebbIPAD_ADHOC",
+      "os": "iOS 10.3.3"
+    },
+    "ver": "1.16",
+    "auth": {
+      "aid": "OWDL4fE4ixNiPBBm"
+    },
+    "lang": "de",
+    "products": [
+      {
+        "id": "express-train",
+        "bitmask": 1,
+        "name": "InterCityExpress & RailJet"
+      },
+      {
+        "id": "long-distance-train-1",
+        "bitmask": 2,
+        "name": "InterCity & EuroCity"
+      },
+      {
+        "id": "long-distance-train-2",
+        "bitmask": 4,
+        "name": "InterCity & EuroCity"
+      },
+      {
+        "id": "long-distance-train-3",
+        "bitmask": 8,
+        "name": "Durchgangszug & EuroNight"
+      },
+      {
+        "id": "regional-train",
+        "bitmask": 16,
+        "name": "Regional & RegionalExpress"
+      },
+      {
+        "id": "suburban",
+        "bitmask": 32,
+        "name": "S-Bahn"
+      },
+      {
+        "id": "bus",
+        "bitmask": 64,
+        "name": "Bus"
+      },
+      {
+        "id": "ferry",
+        "bitmask": 128,
+        "name": "Ferry"
+      },
+      {
+        "id": "subway",
+        "bitmask": 256,
+        "name": "U-Bahn"
+      },
+      {
+        "id": "tram",
+        "bitmask": 512,
+        "name": "Tram"
+      },
+      {
+        "id": "on-call",
+        "bitmask": 2048,
+        "name": "on-call transit, lifts, etc"
+      },
+      {
+        "id": "long-distance-train-4",
+        "bitmask": 4096,
+        "name": "Durchgangszug & EuroNight"
+      }
+    ]
+  }
+}
