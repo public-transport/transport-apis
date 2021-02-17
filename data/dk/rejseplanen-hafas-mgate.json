@@ -1,0 +1,62 @@
+{
+  "name": "Rejseplanen",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "dk",
+    "en",
+    "de"
+  ],
+  "timezone": "Europe/Copenhagen",
+  "attribution": {
+    "name": "Rejsekort & Rejseplan A/S",
+    "homepage": "https://rejseplanen.dk/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["DK"]
+    }
+  },
+  "options": {
+    "endpoint": "https://mobilapps.rejseplanen.dk/bin/iphone.exe",
+    "ext": "DK.9",
+    "client": {
+      "type": "AND",
+      "id": "DK"
+    },
+    "ver": "1.21",
+    "auth": {
+      "type": "AID",
+      "aid": "irkmpm9mdznstenr-android"
+    },
+    "products": [
+      {
+        "id": "intercity",
+        "bitmask": 1,
+        "name": "InterCity"
+      },
+      {
+        "id": "icl",
+        "bitmask": 2,
+        "name": "ICL"
+      },
+      {
+        "id": "regional",
+        "bitmask": 4,
+        "name": "Regional"
+      },
+      {
+        "id": "oe",
+        "bitmask": 8,
+        "name": "Ø"
+      },
+      {
+        "id": "s-tog",
+        "bitmask": 16,
+        "name": "S-Tog A/B/Bx/C/E/F/H"
+      }
+    ]
+  }
+}
