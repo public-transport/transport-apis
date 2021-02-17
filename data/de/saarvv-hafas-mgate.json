@@ -1,0 +1,75 @@
+{
+  "name": "Saarländischer Verkehrsverbund (SaarVV)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de",
+    "en",
+    "fr"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "Saarländische Nahverkehrs-Service GmbH (SNS)",
+    "homepage": "https://saarvv.de/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["DE-SL"]
+    }
+  },
+  "options": {
+    "endpoint": "https://saarfahrplan.de/bin/mgate.exe",
+    "client": {
+      "type": "AND",
+      "id": "ZPS-SAAR",
+      "v": 1000070,
+      "name": "Saarfahrplan",
+      "os": "Android 9"
+    },
+    "ver": "1.21",
+    "auth": {
+      "type": "AID",
+      "aid": "51XfsVqgbdA6oXzHrx75jhlocRg6Xe"
+    },
+    "lang": "de",
+    "products": [
+      {
+        "id": "regional-train",
+        "bitmasks": [8],
+        "name": "regional train"
+      },
+      {
+        "id": "urban-train",
+        "bitmasks": [16],
+        "name": "urban train"
+      },
+      {
+        "id": "subway",
+        "bitmasks": [128],
+        "name": "subway"
+      },
+      {
+        "id": "tram",
+        "bitmasks": [256],
+        "name": "tram"
+      },
+      {
+        "id": "bus",
+        "bitmasks": [32],
+        "name": "Bus"
+      },
+      {
+        "id": "dial-a-ride",
+        "bitmasks": [512],
+        "name": "dial-a-ride"
+      },
+      {
+        "id": "long-distance-train",
+        "bitmasks": [1, 2, 4],
+        "name": "long-distance train"
+      }
+    ]
+  }
+}
