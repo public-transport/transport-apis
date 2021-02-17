@@ -1,0 +1,79 @@
+{
+  "name": "Berliner Verkehrsbetriebe (BVG)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de",
+    "en"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "isProprietary": true,
+    "name": "Berliner Verkehrsbetriebe",
+    "homepage": "https://www.bvg.de/"
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["DE-BE", "DE-BB"]
+    },
+    "regularCoverage": {
+      "region": ["DE"]
+    },
+    "anyCoverage": {
+      "region": ["PL", "CZ"]
+    }
+  },
+  "options": {
+    "endpoint": "https://bvg-apps.hafas.de/bin/mgate.exe",
+    "client": {
+      "type": "IPA",
+      "id": "BVG",
+      "name": "FahrInfo",
+      "v": "6020000"
+    },
+    "ext": "BVG.1",
+    "ver": "1.21",
+    "auth": {
+      "type": "AID",
+      "aid": "Mz0YdF9Fgx0Mb9"
+    },
+    "products": [
+      {
+        "id": "suburban",
+        "bitmasks": [1],
+        "name": "S-Bahn"
+      },
+      {
+        "id": "subway",
+        "bitmasks": [2],
+        "name": "U-Bahn"
+      },
+      {
+        "id": "tram",
+        "bitmasks": [4],
+        "name": "Tram"
+      },
+      {
+        "id": "bus",
+        "bitmasks": [8],
+        "name": "Bus"
+      },
+      {
+        "id": "ferry",
+        "bitmasks": [16],
+        "name": "Fähre"
+      },
+      {
+        "id": "express",
+        "bitmasks": [32],
+        "name": "IC/ICE"
+      },
+      {
+        "id": "regional",
+        "bitmasks": [64],
+        "name": "RB/RE"
+      }
+    ]
+  }
+}
