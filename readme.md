@@ -159,7 +159,20 @@ this as well:
     },
     "ext": "...",
     "micMacSalt": "<hex value>",
-    "version": "1.27"
+    "version": "1.27",
+    "products": [
+        {
+            id: 'subway',
+            name: 'U-Bahn'
+            bitmasks: [1]
+        },
+        {
+            id: 'suburban',
+            bitmasks: [2],
+            name: 'S-Bahn'
+        },
+        ...
+    ]
 }
 ```
 
@@ -170,6 +183,12 @@ The following properties are defined:
 * `ext`: String with the extension version (?) included in Hafas request.
 * `micMacSalt`: A string containing a hexadecimal representation the salt to hash the hashed request body with. Mandatory for endpoints using this authentication mechanism.
 * `version`: String containing the requested Hafas API version (?), mandatory for all known endpoints.
+* `products`: Information about the Hafas product bitmask values and the corresponding product metadata (see below).
+
+Product metadata consists of the following information:
+* `id`: An URL-safe slug-ified version of the name, for machine use.
+* `name`: A human-readable label for the product, as used by the operator.
+* `bitmasks`: An array of integer values of bit values used by Hafas for this product.
 
 ## Contributing
 
