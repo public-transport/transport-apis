@@ -187,7 +187,7 @@ The following properties are defined:
 
 Product metadata consists of the following information:
 * `id`: An URL-safe slug-ified version of the name, for machine use.
-* `name`: A humand readable label for the product, as used by the operator.
+* `name`: A human-readable label for the product, as used by the operator.
 * `bitmasks`: An array of integer values of bit values used by Hafas for this product.
 
 ## Contributing
