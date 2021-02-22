@@ -1,0 +1,21 @@
+{
+    "name": "Großraum-Verkehr Hannover (GVH)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 6.8558, 53.8848 ], [ 6.6065, 52.0076 ], [ 10.7129, 51.0397 ], [ 11.6759, 53.1955 ], [ 9.6178, 53.9532 ], [ 6.8558, 53.8848 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-NI" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://app.efa.de/mdv_server/app_gvh/"
+    },
+    "supportedLanguages": [ "de", "en" ],
+    "type": {
+        "efa": true
+    }
+}
