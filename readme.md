@@ -91,13 +91,13 @@ At least one coverage category must be provided.
 
 ```js
 {
-    "area": { /* GeoJSON polygon */ },
+    "area": { /* GeoJSON polygon or MultiPolygon */ },
     "region": [ /* ISO-3166-1/2 codes */ ]
 }
 ```
 
 The following properties are defined for each coverage category:
-* `area`: a GeoJSON polygon defining the geographic area. This can be reasonably coarse, meter-precision for example is neither necessary nor practically meaningful.
+* `area`: a GeoJSON Polygon or MultiPolygon defining the geographic area. This can be reasonably coarse; meter-precision is neither necessary nor practically meaningful.
 * `region`: an array of ISO-3166-1 alpha 2 country codes, or ISO-3166-2 region codes covered.
 
 Both fields should be provided.
