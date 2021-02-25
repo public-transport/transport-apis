@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://fahrplanauskunft-mv.de/vmv3/"
+        "endpoint": "https://fahrplanauskunft-mv.de/vmv3/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "en", "de" ],
     "timezone": "Europe/Berlin",

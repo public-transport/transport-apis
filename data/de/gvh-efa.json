@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://app.efa.de/mdv_server/app_gvh/"
+        "endpoint": "https://app.efa.de/mdv_server/app_gvh/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "de", "en" ],
     "type": {

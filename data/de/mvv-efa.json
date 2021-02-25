@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://efa.mvv-muenchen.de/mobile/"
+        "endpoint": "https://efa.mvv-muenchen.de/mobile/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "de", "en" ],
     "timezone": "Europe/Berlin",

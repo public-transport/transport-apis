@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://transportnsw.info/web/"
+        "endpoint": "https://transportnsw.info/web/",
+        "supportedOutputFormats": [ "XML" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "en" ],
     "timezone": "Australia/Sydney",

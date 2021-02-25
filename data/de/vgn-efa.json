@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://efa.vgn.de/vgn/"
+        "endpoint": "https://efa.vgn.de/vgn/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "de" ],
     "timezone": "Europe/Berlin",

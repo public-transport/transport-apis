@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://www.rolph.de/fahrplanauskunft/"
+        "endpoint": "https://www.rolph.de/fahrplanauskunft/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "en", "de" ],
     "timezone": "Europe/Berlin",

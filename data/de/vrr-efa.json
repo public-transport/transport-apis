@@ -19,6 +19,8 @@
 		"de"
 	],
 	"options": {
-		"endpoint": "https://efa.vrr.de/standard/"
+		"endpoint": "https://efa.vrr.de/standard/",
+		"supportedOutputFormats": [ "XML", "JSON" ],
+		"xmlOutputFormat": "full"
 	}
 }
