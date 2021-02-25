@@ -9,6 +9,23 @@
     "fr",
     "es"
   ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "DB Fernverkehr AG",
+    "homepage": "https://www.bahn.de/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["DE", "LU", "CH", "LI", "AT"]
+    },
+    "regularCoverage": {
+      "region": ["PL", "CZ", "SK", "HU", "SI", "RO", "BE"]
+    },
+    "anyCoverage": {
+      "region": ["UA", "HR", "BG", "IT", "FR", "ES", "PT", "GB", "DK", "SE"]
+    }
+  },
   "options": {
     "endpoint": "https://reiseauskunft.bahn.de/bin/",
     "lineModeMap": {
