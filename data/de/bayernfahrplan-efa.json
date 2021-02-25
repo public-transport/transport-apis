@@ -12,8 +12,9 @@
         }
     },
     "options": {
-        "compactXmlRepsonse": true,
-        "endpoint": "https://mobile.defas-fgi.de/beg/"
+        "endpoint": "https://mobile.defas-fgi.de/beg/",
+        "supportedOutputFormats": [ "XML" ],
+        "xmlOutputFormat": "compact"
     },
     "supportedLanguages": [ "de", "en" ],
     "type": {

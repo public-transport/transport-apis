@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://www.linzag.at/linz2/"
+        "endpoint": "https://www.linzag.at/linz2/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "de", "en" ],
     "timezone": "Europe/Vienna",

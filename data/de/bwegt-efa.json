@@ -12,7 +12,9 @@
         }
     },
     "options": {
-        "endpoint": "https://www.efa-bw.de/nvbw3L/"
+        "endpoint": "https://www.efa-bw.de/nvbw3L/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "en", "de" ],
     "timezone": "Europe/Berlin",

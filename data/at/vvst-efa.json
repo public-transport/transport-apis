@@ -12,8 +12,9 @@
         }
     },
     "options": {
-        "compactXmlRepsonse": true,
-        "endpoint": "http://appefa10.verbundlinie.at/android/"
+        "endpoint": "http://appefa10.verbundlinie.at/android/",
+        "supportedOutputFormats": [ "XML" ],
+        "xmlOutputFormat": "compact"
     },
     "supportedLanguages": [ "de", "en" ],
     "timezone": "Europe/Vienna",

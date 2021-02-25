@@ -14,7 +14,9 @@
         }
     },
     "options": {
-        "endpoint": "https://projekte.kvv-efa.de/sl3/"
+        "endpoint": "https://projekte.kvv-efa.de/sl3/",
+        "supportedOutputFormats": [ "XML", "JSON" ],
+        "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "en", "de" ],
     "type": {
