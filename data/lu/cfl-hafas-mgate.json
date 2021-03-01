@@ -39,37 +39,37 @@
     "products": [
       {
         "id": "long-distance-train-1",
-        "bitmask": 1,
+        "bitmasks": [1],
         "name": "TGV, ICE, EuroCity"
       },
       {
         "id": "long-distance-train-2",
-        "bitmask": 2,
+        "bitmasks": [2],
         "name": "TGV, ICE, EuroCity"
       },
       {
         "id": "local-train-1",
-        "bitmask": 8,
+        "bitmasks": [8],
         "name": "local trains"
       },
       {
         "id": "local-train-2",
-        "bitmask": 16,
+        "bitmasks": [16],
         "name": "local trains"
       },
       {
         "id": "bus",
-        "bitmask": 32,
+        "bitmasks": [32],
         "name": "bus"
       },
       {
         "id": "tram",
-        "bitmask": 256,
+        "bitmasks": [256],
         "name": "tram"
       },
       {
         "id": "funicular",
-        "bitmask": 512,
+        "bitmasks": [512],
         "name": "Fun"
       }
     ]

@@ -37,37 +37,37 @@
     "products": [
       {
         "id": "high-speed-train",
-        "bitmask": 1,
+        "bitmasks": [1],
         "name": "high-speed train"
       },
       {
         "id": "long-distance-train",
-        "bitmask": 4,
+        "bitmasks": [4],
         "name": "InterCity/Peak"
       },
       {
         "id": "suburban",
-        "bitmask": 16,
+        "bitmasks": [16],
         "name": "S-train"
       },
       {
         "id": "local-train",
-        "bitmask": 64,
+        "bitmasks": [64],
         "name": "local train"
       },
       {
         "id": "metro",
-        "bitmask": 256,
+        "bitmasks": [256],
         "name": "Metro"
       },
       {
         "id": "bus",
-        "bitmask": 512,
+        "bitmasks": [512],
         "name": "bus"
       },
       {
         "id": "tram",
-        "bitmask": 1024,
+        "bitmasks": [1024],
         "name": "tram"
       }
     ]

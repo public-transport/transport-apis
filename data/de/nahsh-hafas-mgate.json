@@ -31,7 +31,7 @@
     "lang": "de",
     "products": [
       {
-        "mode": "train",
+        "id": "highspeed",
         "bitmasks": [1],
         "name": "High-speed rail"
       },
