@@ -1,0 +1,30 @@
+{
+    "name": "Verschwörhaus Ulm",
+    "attribution": {
+        "name": "Verschwörhaus",
+        "homepage": "https://digitransit.im.verschwoerhaus.de/tietoja-palvelusta",
+        "mixedLicenses": true
+    },
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [
+                        [ 8.6407794, 49.0365089 ], [ 11.3182223, 49.0365089 ], [ 11.3182223, 48.2892591 ], [ 8.6407794, 48.2892591 ], [ 8.6407794, 49.0365089 ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-BW" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://api.digitransit.im.verschwoerhaus.de/routing/v1/routers/vsh/",
+        "supportedTransitModes": [ "TRANSIT", "CARPOOL" ]
+    },
+    "supportedLanguages": [ "de" ],
+    "timezone": "Europe/Berlin",
+    "type": {
+        "otpGraphQl": true
+    }
+}

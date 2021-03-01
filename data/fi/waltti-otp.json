@@ -1,0 +1,25 @@
+{
+    "name": "Waltti",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [
+                        [ 19.3167101, 70.1383835 ], [ 31.5841445, 70.1383835 ], [ 31.5841445, 59.723203000000005 ], [ 19.3167101, 59.723203000000005 ], [ 19.3167101, 70.1383835 ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "FI" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://api.digitransit.fi/routing/v1/routers/waltti/",
+        "supportedTransitModes": [ "TRANSIT" ]
+    },
+    "supportedLanguages": [ "de", "en", "fi", "fr", "sv" ],
+    "timezone": "Europe/Helsinki",
+    "type": {
+        "otpGraphQl": true
+    }
+}

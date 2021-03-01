@@ -1,0 +1,30 @@
+{
+    "name": "Stadtnavi",
+    "attribution": {
+        "name": "Stadtnavi",
+        "homepage": "https://stadtnavi.de/",
+        "mixedLicenses": true
+    },
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [
+                        [ 7.503590600000001, 49.8348605 ], [ 11.082291, 49.8348605 ], [ 11.082291, 47.525812300000005 ], [ 7.503590600000001, 47.525812300000005 ], [ 7.503590600000001, 49.8348605 ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-BW" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://api.stadtnavi.de/routing/v1/router/",
+        "supportedTransitModes": [ "TRANSIT", "CARPOOL" ]
+    },
+    "supportedLanguages": [ "de" ],
+    "timezone": "Europe/Berlin",
+    "type": {
+        "otpGraphQl": true
+    }
+}
