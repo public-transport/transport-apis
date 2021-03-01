@@ -34,27 +34,27 @@
     "products": [
       {
         "id": "intercity",
-        "bitmask": 1,
+        "bitmasks": [1],
         "name": "InterCity"
       },
       {
         "id": "icl",
-        "bitmask": 2,
+        "bitmasks": [2],
         "name": "ICL"
       },
       {
         "id": "regional",
-        "bitmask": 4,
+        "bitmasks": [4],
         "name": "Regional"
       },
       {
         "id": "oe",
-        "bitmask": 8,
+        "bitmasks": [8],
         "name": "Ø"
       },
       {
         "id": "s-tog",
-        "bitmask": 16,
+        "bitmasks": [16],
         "name": "S-Tog A/B/Bx/C/E/F/H"
       }
     ]

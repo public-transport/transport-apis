@@ -39,32 +39,32 @@
     "products": [
       {
         "id": "express-train",
-        "bitmask": 1,
+        "bitmasks": [1],
         "name": "local train (TGV/ICE)"
       },
       {
         "id": "national-train-1",
-        "bitmask": 2,
+        "bitmasks": [2],
         "name": "national train (IC/RE/IRE)"
       },
       {
         "id": "national-train-2",
-        "bitmask": 4,
+        "bitmasks": [4],
         "name": "national train (IC/RE/IRE)"
       },
       {
         "id": "local-train",
-        "bitmask": 8,
+        "bitmasks": [8],
         "name": "local train (RB/TER)"
       },
       {
         "id": "bus",
-        "bitmask": 32,
+        "bitmasks": [32],
         "name": "Bus"
       },
       {
         "id": "tram",
-        "bitmask": 256,
+        "bitmasks": [256],
         "name": "Tram"
       }
     ]

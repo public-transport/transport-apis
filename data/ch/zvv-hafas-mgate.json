@@ -42,37 +42,31 @@
       },
       {
         "id": "urban-train",
-        "mode": "train",
         "bitmasks": [32],
         "name": "Urban Train"
       },
       {
         "id": "tram",
-        "mode": "train",
         "bitmasks": [512],
         "name": "Tram"
       },
       {
         "id": "bus",
-        "mode": "bus",
         "bitmasks": [64],
         "name": "Bus"
       },
       {
         "id": "boat",
-        "mode": "watercraft",
         "bitmasks": [16],
         "name": "Boat"
       },
       {
         "id": "cable-car",
-        "mode": "gondola",
         "bitmasks": [128],
         "name": "Cable Car"
       },
       {
         "id": "night-train",
-        "mode": "train",
         "bitmasks": [256],
         "name": "Night Train"
       }

@@ -40,62 +40,62 @@
     "products": [
       {
         "id": "express-train",
-        "bitmask": 1,
+        "bitmasks": [1],
         "name": "InterCityExpress & RailJet"
       },
       {
         "id": "long-distance-train-1",
-        "bitmask": 2,
+        "bitmasks": [2],
         "name": "InterCity & EuroCity"
       },
       {
         "id": "long-distance-train-2",
-        "bitmask": 4,
+        "bitmasks": [4],
         "name": "InterCity & EuroCity"
       },
       {
         "id": "long-distance-train-3",
-        "bitmask": 8,
+        "bitmasks": [8],
         "name": "Durchgangszug & EuroNight"
       },
       {
         "id": "regional-train",
-        "bitmask": 16,
+        "bitmasks": [16],
         "name": "Regional & RegionalExpress"
       },
       {
         "id": "suburban",
-        "bitmask": 32,
+        "bitmasks": [32],
         "name": "S-Bahn"
       },
       {
         "id": "bus",
-        "bitmask": 64,
+        "bitmasks": [64],
         "name": "Bus"
       },
       {
         "id": "ferry",
-        "bitmask": 128,
+        "bitmasks": [128],
         "name": "Ferry"
       },
       {
         "id": "subway",
-        "bitmask": 256,
+        "bitmasks": [256],
         "name": "U-Bahn"
       },
       {
         "id": "tram",
-        "bitmask": 512,
+        "bitmasks": [512],
         "name": "Tram"
       },
       {
         "id": "on-call",
-        "bitmask": 2048,
+        "bitmasks": [2048],
         "name": "on-call transit, lifts, etc"
       },
       {
         "id": "long-distance-train-4",
-        "bitmask": 4096,
+        "bitmasks": [4096],
         "name": "Durchgangszug & EuroNight"
       }
     ]

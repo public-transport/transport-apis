@@ -35,22 +35,22 @@
     "products": [
       {
         "id": "intercity",
-        "bitmask": 2,
+        "bitmasks": [2],
         "name": "InterCity"
       },
       {
         "id": "commuter",
-        "bitmask": 8,
+        "bitmasks": [8],
         "name": "Commuter"
       },
       {
         "id": "dart",
-        "bitmask": 16,
+        "bitmasks": [16],
         "name": "Dublin Area Rapid Transit"
       },
       {
         "id": "luas",
-        "bitmask": 64,
+        "bitmasks": [64],
         "name": "LUAS Tram"
       }
     ]
