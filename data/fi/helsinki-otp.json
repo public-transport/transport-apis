@@ -1,0 +1,29 @@
+{
+    "name": "Helsinki",
+    "attribution": {
+        "license": "CC-BY-4.0",
+        "name": "© Helsinki Region Transport"
+    },
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [
+                        [ 19.5364379883, 66.5802673946 ], [ 29.5712215851, 66.5802673946 ], [ 29.5712215851, 59.7865148075 ], [ 19.5364379883, 59.7865148075 ], [ 19.5364379883, 66.5802673946 ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "FI-17" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://api.digitransit.fi/routing/v1/routers/hsl/",
+        "supportedTransitModes": [ "TRANSIT" ]
+    },
+    "supportedLanguages": [ "de", "en", "fi", "fr", "sv" ],
+    "timezone": "Europe/Helsinki",
+    "type": {
+        "otpGraphQl": true
+    }
+}
