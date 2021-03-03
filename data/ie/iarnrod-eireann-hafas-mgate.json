@@ -4,7 +4,8 @@
     "hafasMgate": true
   },
   "supportedLanguages": [
-    "en"
+    "en",
+    "ga"
   ],
   "timezone": "Europe/Dublin",
   "attribution": {
@@ -31,7 +32,6 @@
       "type": "AID",
       "aid": "P9bplgVCGnozdgQE"
     },
-    "lang": "ga",
     "products": [
       {
         "id": "intercity",

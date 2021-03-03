@@ -74,7 +74,7 @@
       },
       {
         "id": "dial-a-ride",
-        "bitmasks": [256],
+        "bitmasks": [512],
         "name": "Anrufverkehr"
       }
     ]

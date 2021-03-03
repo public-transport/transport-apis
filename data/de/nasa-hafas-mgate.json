@@ -4,7 +4,8 @@
     "hafasMgate": true
   },
   "supportedLanguages": [
-    "de"
+    "de",
+    "en"
   ],
   "timezone": "Europe/Berlin",
   "attribution": {
@@ -31,7 +32,6 @@
       "type": "AID",
       "aid": "nasa-apps"
     },
-    "lang": "en",
     "products": [
       {
         "id": "intercityexpress",
