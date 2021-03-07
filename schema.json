@@ -57,7 +57,8 @@
     "attribution": {
       "type": "object",
       "anyOf": [
-        { "$ref": "#/definitions/attribution_opendata" },
+        { "$ref": "#/definitions/attribution_opendata_specific" },
+        { "$ref": "#/definitions/attribution_opendata_mixed" },
         { "$ref": "#/definitions/attribution_proprietary" }
       ]
     },
@@ -166,9 +167,28 @@
       },
       "minItems": 1
     },
-    "attribution_opendata": {
+    "attribution_opendata_mixed": {
       "type": "object",
       "required": [
+        "mixedLicenses",
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "homepage": {
+          "type": "string"
+        },
+        "mixedLicenses": {
+          "type": "boolean"
+        }
+      }
+    },
+    "attribution_opendata_specific": {
+      "type": "object",
+      "required": [
+        "license",
         "name"
       ],
       "properties": {
