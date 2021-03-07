@@ -56,7 +56,7 @@
     },
     "attribution": {
       "type": "object",
-      "oneOf": [
+      "anyOf": [
         { "$ref": "#/definitions/attribution_opendata" },
         { "$ref": "#/definitions/attribution_proprietary" }
       ]
