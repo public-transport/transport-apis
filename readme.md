@@ -128,6 +128,24 @@ Properties:
 
 name and license are mandatory, homepage is optional.
 
+For endpoints aggregating data under various Open Data licenses, the situation can be
+more complex than this though, making it impossible to specify a single license. This
+can be expressed using the `mixedLicenses` property:
+
+```js
+{
+    "attribution": {
+        "name": "© navitia.io",
+        "homepage": "https://www.navitia.io/",
+        "mixedLicenses": true
+    }
+}
+```
+
+If `mixedLicenses` is set to `true`, the license details are provided in some
+other form. This can be for example via the `homepage` property, or as part
+of the endpoint responses themselves.
+
 #### Proprietary
 
 If an endpoint is known to be proprietary, `attribution` can be used to specify

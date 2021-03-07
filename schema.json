@@ -169,7 +169,6 @@
     "attribution_opendata": {
       "type": "object",
       "required": [
-        "license",
         "name"
       ],
       "properties": {
@@ -182,6 +181,9 @@
         },
         "homepage": {
           "type": "string"
+        },
+        "mixedLicenses": {
+          "type": "boolean"
         }
       }
     },
