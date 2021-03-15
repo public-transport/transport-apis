@@ -1,0 +1,58 @@
+{
+    "name": "Polskie Koleje Państwowe (PKP)",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 13.5596, 54.3948 ], [ 14.8372, 50.3015 ], [ 23.0239, 48.5807 ], [ 25.5789, 52.1787 ], [ 22.007, 55.6724 ], [ 13.5596, 54.3948 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "PL" ]
+        }
+    },
+    "options": {
+        "auth": {
+            "aid": "DrxJYtYZQpEBCtcb",
+            "type": "AID"
+        },
+        "client": {
+            "id": "HAFAS",
+            "type": "AND"
+        },
+        "endpoint": "https://mobil.rozklad-pkp.pl:8019/bin/mgate.exe",
+        "products": [
+            {
+                "id": "high-speed-train",
+                "bitmasks": [1, 2],
+                "name": "ExpressInterCity, ExpressInterCity Premium, InterCityExpress"
+            },
+            {
+                "id": "long-distance-train",
+                "bitmasks": [4],
+                "name": "InterCity, Twoje Linie Kolejowe, EuroCity, EuroNight"
+            },
+            {
+                "id": "regional-train",
+                "bitmasks": [8],
+                "name": "Regional"
+            },
+            {
+                "id": "bus",
+                "bitmasks": [ 16, 32 ],
+                "name": "Bus"
+            },
+            {
+                "id": "ferry",
+                "bitmasks": [ 64 ],
+                "name": "Ferry"
+            }
+        ],
+        "ver": "1.21"
+    },
+    "supportedLanguages": [ "en", "pl" ],
+    "timezone": "Europe/Warsaw",
+    "type": {
+        "hafasMgate": true
+    }
+}
