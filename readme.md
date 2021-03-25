@@ -208,6 +208,31 @@ Product metadata consists of the following information:
 * `name`: A human-readable label for the product, as used by the operator.
 * `bitmasks`: An array of integer values of bit values used by Hafas for this product.
 
+#### Hafas query.exe
+
+```js
+"options": {
+    "endpoint": "https://.../",
+    "products": [
+        {
+            id: 'subway',
+            name: 'U-Bahn'
+            bitmasks: [1]
+        },
+        {
+            id: 'suburban',
+            bitmasks: [2],
+            name: 'S-Bahn'
+        },
+        ...
+    ]
+}
+```
+
+The following properties are defined:
+* `endpoint`: The base URL containing the various endpoints (`query.exe`, `stboard.exe`, etc).
+* `products`: Hafas product metadata, see the Hafas mgate.exe variant above for the format details.
+
 #### EFA
 
 ``` js
