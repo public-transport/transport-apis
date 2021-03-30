@@ -1,0 +1,73 @@
+{
+    "name": "Resrobot",
+    "coverage": {
+        "regularCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 9.6488, 58.4882 ], [ 14.5504, 69.8817 ], [ 27.2476, 68.2913 ], [ 16.8708, 54.5773 ], [ 12.7514, 54.6556 ], [ 9.6488, 58.4882 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "SE" ]
+        }
+    },
+    "options": {
+        "auth": {
+            "aid": "h5o3n7f4t2m8l9x1",
+            "type": "AID"
+        },
+        "client": {
+            "id": "SAMTRAFIKEN",
+            "type": "WEB"
+        },
+        "endpoint": "https://reseplanerare.resrobot.se/bin/mgate.exe",
+        "products": [
+            {
+                "bitmasks": [ 1 ],
+                "id": "air"
+            },
+            {
+                "bitmasks": [ 2 ],
+                "id": "long-distance-train"
+            },
+            {
+                "bitmasks": [ 4 ],
+                "id": "local-train"
+            },
+            {
+                "bitmasks": [ 8 ],
+                "id": "bus-1"
+            },
+            {
+                "bitmasks": [ 16 ],
+                "id": "rapid-transit"
+            },
+            {
+                "bitmasks": [ 32 ],
+                "id": "metro"
+            },
+            {
+                "bitmasks": [ 64 ],
+                "id": "tramway"
+            },
+            {
+                "bitmasks": [ 128 ],
+                "id": "bus-2"
+            },
+            {
+                "bitmasks": [ 256 ],
+                "mode": "ferry"
+            },
+            {
+                "bitmasks": [ 512 ],
+                "mode": "on-demand"
+            }
+        ],
+        "ver": "1.18"
+    },
+    "supportedLanguages": [ "sv" ],
+    "timezone": "Europe/Stockholm",
+    "type": {
+        "hafasMgate": true
+    }
+}
