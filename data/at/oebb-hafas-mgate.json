@@ -26,13 +26,12 @@
   "options": {
     "endpoint": "http://fahrplan.oebb.at/bin/mgate.exe",
     "client": {
-      "type": "IPA",
+      "type": "IPH",
       "id": "OEBB",
-      "v": "6000500",
-      "name": "oebbIPAD_ADHOC",
-      "os": "iOS 10.3.3"
+      "v": "6030600",
+      "name": "oebbPROD-ADHOC"
     },
-    "ver": "1.16",
+    "ver": "1.41",
     "auth": {
       "aid": "OWDL4fE4ixNiPBBm"
     },
