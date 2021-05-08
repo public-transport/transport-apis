@@ -31,11 +31,12 @@
       "v": "5030100",
       "os": "iOS 13.3"
     },
-    "ver": "1.24",
+    "ver": "1.27",
     "auth": {
       "type": "AID",
       "aid": "Mpf5UPC0DmzV8jkg"
     },
+    "micMacSalt": "535033316D4275665379434C6D4E7870",
     "products": [
       {
         "id": "nationalExpress",
