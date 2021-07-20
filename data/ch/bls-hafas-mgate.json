@@ -1,0 +1,86 @@
+{
+  "name": "BLS AG",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de"
+  ],
+  "timezone": "Europe/Zurich",
+  "attribution": {
+    "name": "BLS AG",
+    "homepage": "https://www.bls.ch/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "area": {"type":"Polygon","coordinates":[[[7.24273681640625,47.025206001585396],[7.25921630859375,46.9052455464292],[7.3663330078125,46.873335829010244],[7.476196289062499,46.71538559839362],[7.643737792968749,46.5739667965278],[8.04473876953125,46.62492015414768],[8.45672607421875,46.89210855010362],[8.52813720703125,47.03831035673275],[8.39630126953125,47.17477833929903],[8.1024169921875,47.137424646293866],[8.1024169921875,47.040182144806664],[7.882690429687501,46.9446372241817],[7.6629638671875,47.05328282273657],[7.45147705078125,47.11313066447019],[7.24273681640625,47.025206001585396]]]},
+      "region": ["CH-BE", "CH-LU"]
+    }
+  },
+  "options": {
+    "auth": {
+      "type": "AID",
+      "aid": "3jkAncud78HSoqclmN54812A"
+    },
+    "client": {
+      "id": "HAFAS",
+      "type": "WEB",
+      "name": "webapp",
+      "l": "vs_webapp"
+    },
+    "endpoint": "https://bls.hafas.de/bin/mgate.exe",
+    "products": [
+      {
+        "id": "ice",
+        "bitmasks": [1],
+        "name": "ICE"
+      },
+      {
+        "id": "ic-ec",
+        "bitmasks": [2],
+        "name": "IC/EC"
+      },
+      {
+        "id": "ir",
+        "bitmasks": [4],
+        "name": "IR"
+      },
+      {
+        "id": "local",
+        "bitmasks": [8],
+        "name": "Nahverkehr"
+      },
+      {
+        "id": "watercraft",
+        "bitmasks": [16],
+        "name": "Schiff"
+      },
+      {
+        "id": "s-bahn",
+        "bitmasks": [32],
+        "name": "S-Bahn"
+      },
+      {
+        "id": "bus",
+        "bitmasks": [64],
+        "name": "Bus"
+      },
+      {
+        "id": "gondola",
+        "bitmasks": [128],
+        "name": "Seilbahn"
+      },
+      {
+        "id": "tram",
+        "bitmasks": [512],
+        "name": "Tram"
+      },
+      {
+        "id": "car-shuttle-train",
+        "bitmasks": [4096],
+        "name": "Autoverlad"
+      }
+    ]
+  }
+}

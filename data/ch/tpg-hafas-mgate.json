@@ -1,0 +1,81 @@
+{
+  "name": "Transports publics genevois (TPG)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "fr"
+  ],
+  "timezone": "Europe/Zurich",
+  "attribution": {
+    "name": "Transports publics genevois",
+    "homepage": "https://www.tpg.ch/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "area": {"type":"Polygon","coordinates":[[[5.9456634521484375,46.350245401746875],[5.88592529296875,46.22307764691826],[5.95733642578125,46.081328021385964],[6.1962890625,46.076564991185734],[6.3768768310546875,46.198369107130254],[6.356964111328125,46.33507671233457],[6.1269378662109375,46.42413249720715],[5.9456634521484375,46.350245401746875]]]},
+      "region": [ "CH-GE" ]
+    }
+  },
+  "options": {
+    "auth": {
+      "type": "AID",
+      "aid": "9CZsdl5PqX8n5D6b"
+    },
+    "client": {
+      "id": "HAFAS",
+      "type": "WEB",
+      "name": "webapp",
+      "l": "vs_webapp"
+    },
+    "endpoint": "https://tpg-webapp.hafas.de/bin/mgate.exe",
+    "products": [
+      {
+        "id": "tgv",
+        "bitmasks": [1],
+        "name": "TGV"
+      },
+      {
+        "id": "intercity-train",
+        "bitmasks": [2],
+        "name": "Intercité"
+      },
+      {
+        "id": "ir",
+        "bitmasks": [4],
+        "name": "IR"
+      },
+      {
+        "id": "train-direct",
+        "bitmasks": [8],
+        "name": "Train direct"
+      },
+      {
+        "id": "watercraft",
+        "bitmasks": [16],
+        "name": "Bateau"
+      },
+      {
+        "id": "regio-express",
+        "bitmasks": [32],
+        "name": "Regio Express"
+      },
+      {
+        "id": "bus",
+        "bitmasks": [64],
+        "name": "Bus"
+      },
+      {
+        "id": "gondola",
+        "bitmasks": [128],
+        "name": "Transport à câbles"
+      },
+      {
+        "id": "tram",
+        "bitmasks": [256, 512],
+        "name": "Tram"
+      }
+    ]
+  }
+}
