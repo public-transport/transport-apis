@@ -1,0 +1,88 @@
+{
+  "name": "Innsbrucker Verkehrsbetriebe (IVB)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de"
+  ],
+  "timezone": "Europe/Vienna",
+  "attribution": {
+    "name": "Innsbrucker Verkehrsbetriebe und Stubaitalbahn GmbH",
+    "homepage": "https://www.ivb.at/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "regularCoverage": {
+      "region": [ "AT-7" ]
+    },
+    "realtimeCoverage": {
+      "region": [ "AT-7" ]
+    }
+  },
+  "options": {
+    "auth": {
+      "type": "AID",
+      "aid": "wf7mcf9bv3nv8g5f"
+    },
+    "client": {
+      "id": "VAO",
+      "type": "WEB",
+      "name": "webapp",
+      "l": "vs_ivb"
+    },
+    "endpoint": "https://fahrplan.ivb.at/bin/mgate.exe",
+    "products": [
+      {
+        "id": "bahn-s-bahn",
+        "bitmasks": [1, 2],
+        "name": "Bahn & S-Bahn"
+      },
+      {
+        "id": "u-bahn",
+        "bitmasks": [4],
+        "name": "U-Bahn"
+      },
+      {
+        "id": "strassenbahn",
+        "bitmasks": [16],
+        "name": "Straßenbahn"
+      },
+      {
+        "id": "stadtbus",
+        "bitmasks": [128],
+        "name": "Stadtbus"
+      },
+      {
+        "id": "regionalbus",
+        "bitmasks": [64],
+        "name": "Regionalbus"
+      },
+      {
+        "id": "fernbus",
+        "bitmasks": [32],
+        "name": "Fernbus"
+      },
+      {
+        "id": "other-bus",
+        "bitmasks": [2048],
+        "name": "sonstige Busse"
+      },
+      {
+        "id": "seilbahn-zahnradbahn",
+        "bitmasks": [256],
+        "name": "Seil-/Zahnradbahn"
+      },
+      {
+        "id": "schiff",
+        "bitmasks": [512],
+        "name": "Schiff"
+      },
+      {
+        "id": "anrufsammeltaxi",
+        "bitmasks": [1024],
+        "name": "Anrufsammeltaxi"
+      }
+    ]
+  }
+}
