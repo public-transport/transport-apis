@@ -1,0 +1,64 @@
+{
+  "name": "Deutsche Bahn (DB)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de",
+    "en"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "Deutsche Bahn AG",
+    "homepage": "https://bahn.de/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["DE"]
+    }
+  },
+  "options": {
+    "auth": {
+      "type": "AID",
+      "aid": "izfpmpj8tnh6acye"
+    },
+    "client": {
+      "id": "HAFAS",
+      "name": "Test-Client",
+      "type": "WEB",
+      "v": "1.0.0"
+    },
+    "endpoint": "https://db-smartrbl.hafas.de/mct/mgate",
+    "version": "1.18",
+    "products": [
+      {
+        "id": "ice",
+        "bitmasks": [1],
+        "name": "ICE"
+      },
+      {
+        "id": "ic-ec",
+        "bitmasks": [2],
+        "name": "IC/EC"
+      },
+      {
+        "id": "d-zug",
+        "bitmasks": [4],
+        "name": "D-Zug"
+      },
+      {
+        "id": "RE/RB",
+        "bitmasks": [8],
+        "name": "RE/RB"
+      },
+      {
+        "id": "s-bahn",
+        "bitmasks": [16],
+        "name": "S-Bahn"
+      }
+    ],
+    "locationIdentifierType": "db",
+    "standardLocationIdentifierType": "ibnr"
+  }
+}
