@@ -1,0 +1,89 @@
+{
+  "name": "Deutsche Bahn (DB)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de",
+    "en"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "Deutsche Bahn AG",
+    "homepage": "https://bahn.de/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "region": ["DE"]
+    },
+    "anyCoverage": {
+      "region": ["PL", "CZ", "SK", "HU", "SI", "RO", "BE", "UA", "HR", "BG", "IT", "FR", "ES", "PT", "GB", "DK", "SE"]
+    }
+  },
+  "options": {
+    "auth": {
+      "type": "AID",
+      "aid": "Xd91BNAVkuI6rr6z"
+    },
+    "checksumSalt": "7a374446424e41563048766836715137",
+    "client": {
+      "id": "DB-REGIO-BNAV",
+      "name": "StreckenagentPROD-APPSTORE",
+      "type": "IPH",
+      "v": "3000500"
+    },
+    "endpoint": "https://bnav.hafas.de/bin/mgate.exe",
+    "ext": "DB.R19.12.a",
+    "version": "1.18",
+    "products": [
+      {
+        "id": "ice",
+        "bitmasks": [1],
+        "name": "ICE"
+      },
+      {
+        "id": "ic-ec",
+        "bitmasks": [2],
+        "name": "IC/EC"
+      },
+      {
+        "id": "d-zug",
+        "bitmasks": [4],
+        "name": "D-Zug"
+      },
+      {
+        "id": "RE/RB",
+        "bitmasks": [8],
+        "name": "RE/RB"
+      },
+      {
+        "id": "s-bahn",
+        "bitmasks": [16],
+        "name": "S-Bahn"
+      },
+      {
+        "id": "bus",
+        "bitmasks": [32],
+        "name": "Bus"
+      },
+      {
+        "id": "faehre",
+        "bitmasks": [64],
+        "name": "Fähre"
+      },
+      {
+        "id": "u-bahn",
+        "bitmasks": [128],
+        "name": "U-Bahn"
+      },
+      {
+        "id": "strassenbahn",
+        "bitmasks": [256],
+        "name": "Straßenbahn"
+      }
+    ],
+    "locationIdentifierType": "db",
+    "standardLocationIdentifierType": "ibnr"
+  }
+}
