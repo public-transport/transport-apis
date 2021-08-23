@@ -1,0 +1,41 @@
+{
+  "name": "Dallas Area Rapid Transit (DART)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "en"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "Dallas Area Rapid Transit",
+    "homepage": "https://www.dart.org/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "area": {"type":"Polygon","coordinates":[[[-97.22351074218749,33.56199537293026],[-97.6300048828125,33.500178528242294],[-97.9376220703125,33.19732768648872],[-97.95684814453124,32.76880048488168],[-97.88818359375,32.35676318267811],[-97.3004150390625,32.222095840502334],[-96.470947265625,32.14771106595571],[-96.07269287109375,32.312670050625805],[-95.96282958984375,32.74339241542703],[-96.053466796875,33.19732768648872],[-96.46820068359374,33.55512901742288],[-97.22351074218749,33.56199537293026]]]}
+    }
+  },
+  "options": {
+    "auth": {
+      "type": "AID",
+      "aid": "XNFGL2aSkxfDeK8N4waOZnsdJ"
+    },
+    "client": {
+      "id": "DART",
+      "type": "WEB",
+      "name": "webapp",
+      "l": "vs_webapp"
+    },
+    "endpoint": "https://auskunft.avv.de/bin/mgate.exe",
+    "ver": "1.35",
+    "products": [
+      {
+        "id": "bus",
+        "bitmasks": [32],
+        "name": "Bus"
+      }
+    ]
+  }
+}
