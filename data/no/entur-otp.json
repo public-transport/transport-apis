@@ -1,0 +1,26 @@
+{
+    "name": "Entur",
+    "attribution": {
+        "license": "Norwegian Licence for Open Government Data (NLOD)",
+        "licenseUrl": "https://data.norge.no/nlod/en",
+        "name": "Entur",
+        "url": "https://www.entur.org/"
+    },
+    "coverage": {
+        "regularCoverage": {
+            "area": {
+                "coordinates": [ [ [ 5.14553, 58.7711 ], [ 8.5538, 56.8847 ], [ 31.5632, 69.8993 ], [ 25.3899, 85.02453 ], [ -0.1243, 75.9905 ], [ 5.14553, 58.7711 ] ] ],
+                "type": "Polygon"
+            },
+            "region": [ "NO" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://api.entur.io/journey-planner/v2/graphql/",
+        "apiVersion": "entur"
+    },
+    "supportedLanguages": [ "no" ],
+    "type": {
+        "otpGraphQl": true
+    }
+}
