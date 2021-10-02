@@ -256,6 +256,19 @@ The following properties are defined:
 * `dmRequestCommand`: The command used for departure monitor requests (defautl: `XML_DM_REQUEST`).
 * `tripRequestCommand`: The command used for trip requests (default: `XML_TRIP_REQUEST2`).
 
+#### Open Trip Planner with GraphQL
+
+``` js
+"options": {
+    "endpoint": "https://...",
+    "apiVersion": "otp2"
+}
+```
+
+The following properties are defined:
+* `endpoint`: Base URL for the API, without e.g. the `index/graphql` suffix.
+* `apiVersion`: One of `otp1`, `otp2` or `entur`.
+
 ## Contributing
 
 Note that, by participating in this project, you commit to the [code of conduct](code-of-conduct.md). If you want to contribute to this list, feel free to open an Issue at the [Issues page](https://github.com/public-transport/european-transport-operators/issues).
