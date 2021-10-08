@@ -1,0 +1,21 @@
+{
+    "name": "Peatus",
+    "coverage": {
+        "anyCoverage": {
+            "area": {
+                "coordinates": [ [ [ 21.01000005, 56.47999934 ], [ 22.26000113, 60.4499993 ], [ 23.76000159, 61.48999981 ], [ 28.77000133, 60.69999991 ], [ 30.33000028, 59.94999924 ], [ 30.362018, 59.92978 ], [ 30.54000016, 56.33999986 ], [ 29.95999976, 55.84999959 ], [ 24.36999903, 55.72999942 ], [ 21.13999916, 55.68999934 ], [ 21.06999937, 55.91000052 ], [ 21.01000005, 56.47999934 ] ] ],
+                "type": "Polygon"
+            },
+            "region": [ "EE" ]
+        }
+    },
+    "options": {
+        "apiVersion": "otp1",
+        "endpoint": "https://api.peatus.ee/routing/v1/routers/estonia/"
+    },
+    "supportedLanguages": [ "ee" ],
+    "timezone": "Europe/Tallinn",
+    "type": {
+        "otpGraphQl": true
+    }
+}

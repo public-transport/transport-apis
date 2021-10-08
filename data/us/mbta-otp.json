@@ -1,0 +1,20 @@
+{
+    "name": "Massachusetts Bay Transportation Authority (MBTA)",
+    "coverage": {
+        "anyCoverage": {
+            "area": {
+                "coordinates": [ [ [ -71.347133, 42.285719 ], [ -71.325404, 42.41342 ], [ -71.280995, 42.593248 ], [ -70.874801, 42.609212 ], [ -70.811405, 42.561651 ], [ -70.837529, 42.24421 ], [ -70.934405, 42.107156 ], [ -71.016534, 42.084659 ], [ -71.26151, 42.0951 ], [ -71.325217, 42.120694 ], [ -71.347133, 42.285719 ] ] ],
+                "type": "Polygon"
+            },
+            "region": [ "US-MA" ]
+        }
+    },
+    "options": {
+        "endpoint": "https://prod.otp.mbtace.com/otp/routers/mbta/"
+    },
+    "supportedLanguages": [ "en" ],
+    "timezone": "America/New_York",
+    "type": {
+        "otpRest": true
+    }
+}
