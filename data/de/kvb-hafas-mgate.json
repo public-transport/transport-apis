@@ -1,0 +1,68 @@
+{
+  "name": "Kölner Verkehrs-Betriebe (KVB)",
+  "type": {
+    "hafasMgate": true
+  },
+  "supportedLanguages": [
+    "de"
+  ],
+  "timezone": "Europe/Berlin",
+  "attribution": {
+    "name": "Kölner Verkehrs-Betriebe AG",
+    "homepage": "https://kvb.koeln/",
+    "isProprietary": true
+  },
+  "coverage": {
+    "realtimeCoverage": {
+      "area": {
+        "type":"Polygon",
+        "coordinates":[[[6.92962,51.02714],[6.83074,50.99474],[6.80740,50.92597],[6.85684,50.88007],[6.97425,50.83543],[7.09373,50.87141],[7.11845,50.92424],[7.10609,50.97615],[7.05253,51.01893],[6.92962,51.02714]]]
+      }
+    }
+  },
+  "options": {
+    "auth": {
+      "type": "AID",
+      "aid": "Rt6foY5zcTTRXMQs"
+    },
+    "client": {
+      "id": "HAFAS",
+      "type": "WEB",
+      "name": "webapp",
+      "l": "vs_webapp"
+    },
+    "endpoint": "https://auskunft.kvb.koeln/gate",
+    "products": [
+      {
+        "id": "stadtbahn",
+        "bitmasks": [2],
+        "name": "Stadtbahn"
+      },
+      {
+        "id": "bus",
+        "bitmasks": [8],
+        "name": "Bus"
+      },
+      {
+        "id": "taxibus",
+        "bitmasks": [256],
+        "name": "Taxibus"
+      },
+      {
+        "id": "s-bahn",
+        "bitmasks": [1],
+        "name": "S-Bahn"
+      },
+      {
+        "id": "regionalverkehr",
+        "bitmasks": [46],
+        "name": "Regionalverkehr"
+      },
+      {
+        "id": "fernverkehr",
+        "bitmasks": [32],
+        "name": "Fernverkehr"
+      }
+    ]
+  }
+}
