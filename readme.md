@@ -33,6 +33,7 @@ Known protocols:
 * `navitia`
 * `otpGraphQl`
 * `otpRest`
+* `trias`
 
 ### Supported Languages
 
@@ -109,8 +110,7 @@ The `attribution` property specifies licensing information for an endpoint.
 #### Open Data
 
 If an endpoint provides results under an Open Data license, `attribution`
-generally follows the [Data Packages
-format](https://dataprotocols.org/data-packages/):
+generally follows the [Data Packages format](https://dataprotocols.org/data-packages/):
 
 ```js
 {
@@ -268,6 +268,19 @@ The following properties are defined:
 The following properties are defined:
 * `endpoint`: Base URL for the API, without e.g. the `index/graphql` suffix.
 * `apiVersion`: One of `otp1`, `otp2` or `entur`.
+
+#### TRIAS
+
+The following properties are defined:
+* `endpoint`: Base URL for the API
+* `isTestingEndpoint`: Whether the endpoint is explictly meant for testing puposes
+* `triasVersion`: Highest [TRIAS version](https://github.com/VDVde/TRIAS/releases) supported by the API
+* `requestContentType`: [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) e.g. `text/xml`
+* `requiresSignUp`: Whether one needs to sign up to obtain an API key.
+* `requiresContract` Whether one needs to sign a contract to use the API.
+* `authorizationMethod`: One of `Authorization-Header`, `RequestorRef`
+* `providedServices`: array of supported services as listed [in the EKAP documentation](https://www.vdv.de/431-2sdes-v-1-3.pdfx#page=51)
+* `requestLimitPolicy`: request-policy in the [markup of the `RateLimit` HTTP header](https://www.ietf.org/archive/id/draft-ietf-httpapi-ratelimit-headers-04.html#name-expressing-rate-limit-polic)
 
 ## Contributing
 
