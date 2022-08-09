@@ -23,7 +23,8 @@
           "hafasQuery",
           "navitia",
           "otpGraphQl",
-          "otpRest"
+          "otpRest",
+          "trias"
         ]
       },
       "additionalProperties": {
