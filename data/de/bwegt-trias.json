@@ -1,0 +1,29 @@
+{
+    "name": "bwegt",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [ [ 8.3124, 49.6365 ], [ 7.2366, 47.4941 ], [ 10.473, 47.5443 ], [ 10.5414, 49.9647 ], [ 8.3124, 49.6365 ] ]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-BW" ]
+        }
+    },
+    "options": {
+        "endpoint": "http://efa-bw.de/trias",
+        "isTestingEndpoint": false,
+        "triasVersion": 1.1,
+        "requestContentType": "text/xml",
+        "requiresSignUp": true,
+        "requiresContract": false,
+        "authorizationMethod": "RequestorRef",
+        "providedServices": ["TripRequest", "StopEventRequest"]
+    },
+    "supportedLanguages": [ "en", "de" ],
+    "timezone": "Europe/Berlin",
+    "type": {
+        "trias": true
+    }
+}
