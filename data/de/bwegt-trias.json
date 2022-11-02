@@ -19,7 +19,7 @@
         "requiresSignUp": true,
         "requiresContract": false,
         "authorizationMethod": "RequestorRef",
-        "providedServices": ["TripRequest", "StopEventRequest"]
+        "providedServices": ["TripRequest", "StopEventRequest", "LocationInformationRequest"]
     },
     "supportedLanguages": [ "en", "de" ],
     "timezone": "Europe/Berlin",
