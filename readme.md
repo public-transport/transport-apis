@@ -84,7 +84,7 @@ There's three coverage categories:
 
 * `regularCoverage`: In this area reasonably complete data is available, but e.g. realtime data from other operators is missing or inaccurate quite often.
 
-* `anyCoverage`: In this area only incomplete and/or shallow data is available. This is commonly the case in areas outside of the operating area,
+* `anyCoverage`: In this area only incomplete and/or shallow data is available. This is commonly the case in areas outside the operating area,
 e.g. long-distance trains & buses but not local modes of transport, or planned data but not realtime data.
 You could say that this is the extent to which, in a region, the API provides any data.
 
@@ -253,7 +253,7 @@ The following properties are defined:
 * `xmlOutputFormat`: a string specifying the XML output format variant, either `full` or `compact`.
 * `mId`: Value of the `mId` query argument. Omitted if not set.
 * `stopfinderRequestCommand`: The command used for stop finder requests (default: `XML_STOPFINDER_REQUEST`).
-* `dmRequestCommand`: The command used for departure monitor requests (defautl: `XML_DM_REQUEST`).
+* `dmRequestCommand`: The command used for departure monitor requests (default: `XML_DM_REQUEST`).
 * `tripRequestCommand`: The command used for trip requests (default: `XML_TRIP_REQUEST2`).
 
 #### Open Trip Planner with GraphQL
@@ -273,7 +273,7 @@ The following properties are defined:
 
 The following properties are defined:
 * `endpoint`: Base URL for the API
-* `isTestingEndpoint`: Whether the endpoint is explictly meant for testing puposes
+* `isTestingEndpoint`: Whether the endpoint is explicitly meant for testing purposes
 * `triasVersion`: Highest [TRIAS version](https://github.com/VDVde/TRIAS/releases) supported by the API
 * `requestContentType`: [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) e.g. `text/xml`
 * `requiresSignUp`: Whether one needs to sign up to obtain an API key.
