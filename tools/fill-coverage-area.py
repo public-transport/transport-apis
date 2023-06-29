@@ -28,8 +28,10 @@ ISO3166_1_URL = f"https://volkerkrause.eu/~vkrause/iso3166-boundaries/iso3166-1-
 ISO3166_2_VERSION = ISO3166_1_VERSION
 ISO3166_2_URL = f"https://volkerkrause.eu/~vkrause/iso3166-boundaries/iso3166-2-boundaries.geojson-{ISO3166_2_VERSION}.zip"
 
+
 def iso3166FilePath(name):
     return os.path.join(os.path.dirname(__file__), name)
+
 
 def downloadIso3166File(url, name):
     fileName = iso3166FilePath(name)
@@ -46,41 +48,44 @@ def downloadIso3166File(url, name):
 #
 # Geometry/Geographic math
 # Coordinates are assumed to be in GeoJSON format, ie. [lon, lat]
-#
+
+
 def lineLength(p1, p2):
     return pow(pow(p1[0] - p2[0], 2) + pow(p1[1] - p2[1], 2), 0.5)
 
+
 # distance in meters between two geographic coordinates
 def distance(p1, p2):
-    earthRadius = 6371000.0;
-    d_lat = math.radians(p1[1] - p2[1]);
-    d_lon = math.radians(p1[0] - p2[0]);
-    a = pow(math.sin(d_lat / 2.0), 2) + math.cos(math.radians(p1[1])) * math.cos(math.radians(p2[1])) * pow(math.sin(d_lon / 2.0), 2);
-    return 2.0 * earthRadius * math.atan2(math.sqrt(a), math.sqrt(1.0 - a));
+    earthRadius = 6371000.0
+    d_lat = math.radians(p1[1] - p2[1])
+    d_lon = math.radians(p1[0] - p2[0])
+    a = pow(math.sin(d_lat / 2.0), 2) + math.cos(math.radians(p1[1])) * math.cos(math.radians(p2[1])) * pow(math.sin(d_lon / 2.0), 2)
+    return 2.0 * earthRadius * math.atan2(math.sqrt(a), math.sqrt(1.0 - a))
+
 
 # distance in meters from p to a line given by coordinates l1 and l2
 def distanceToLine(l1, l2, p):
-    l = lineLength(l1, l2)
-    if l == 0:
+    line_length = lineLength(l1, l2)
+    if line_length == 0:
         return distance(l1, p)
 
     d = (p[0] - l1[0]) * (l2[0] - l1[0]) + (p[1] - l1[1]) * (l2[1] - l1[1])
-    r = max(0.0, min(1.0, d / (l * l)))
+    r = max(0.0, min(1.0, d / (line_length * line_length)))
     i = [l1[0] + r * (l2[0] - l1[0]), l1[1] + r * (l2[1] - l1[1])]
     return distance(i, p)
 
+
 # min/max coordinates of a sequence of coordinates
 def boundingBox(ring):
-    minP = [180,90]
-    maxP = [-180,-90]
+    minP = [180, 90]
+    maxP = [-180, -90]
     for p in ring:
         minP = [min(minP[0], p[0]), min(minP[1], p[1])]
         maxP = [max(maxP[0], p[0]), max(maxP[1], p[1])]
     return [minP, maxP]
 
-#
+
 # Polygon simplification
-#
 def douglasPeucker(ring, threshold):
     if len(ring) < 3:
         return ring
@@ -100,9 +105,8 @@ def douglasPeucker(ring, threshold):
     else:
         return [ring[0], ring[-1]]
 
-#
+
 # Finding and simplifying boundary polygons specificially for Transport API
-#
 def simplifyRing(ring):
     bbox = boundingBox(ring)
     if arguments.bounding_box and (bbox[1][1] < arguments.bounding_box[0] or bbox[0][1] > arguments.bounding_box[2] or bbox[1][0] < arguments.bounding_box[1] or bbox[0][0] > arguments.bounding_box[3]):
@@ -114,17 +118,18 @@ def simplifyRing(ring):
         print("dropping polygon with bounding box below threshold")
         return []
 
-    l = len(ring)
+    ring_length = len(ring)
     ring = douglasPeucker(ring, arguments.threshold)
     if len(ring) < 5:
         print("polygon degenerated, using bounding box instead")
         ring = [bbox[0], [bbox[1][0], bbox[0][1]], bbox[1], [bbox[0][0], bbox[1][1]], bbox[0]]
     else:
-        print(f"polygon simplification dropped {l - len(ring)} of {l} points")
+        print(f"polygon simplification dropped {ring_length - len(ring)} of {ring_length} points")
     for coordinate in ring:
         coordinate[0] = round(coordinate[0], arguments.decimals)
         coordinate[1] = round(coordinate[1], arguments.decimals)
     return ring
+
 
 def simplifyMultiPolygon(multiPoly):
     for i in range(0, len(multiPoly)):
@@ -133,6 +138,7 @@ def simplifyMultiPolygon(multiPoly):
         multiPoly[i] = [ring for ring in multiPoly[i] if ring]
     multiPoly = [poly for poly in multiPoly if poly]
     return multiPoly
+
 
 def iso3166Boundary(regionCode, geojsonFile, featureKey):
     geojson = json.loads(open(geojsonFile, 'r').read())
@@ -144,17 +150,18 @@ def iso3166Boundary(regionCode, geojsonFile, featureKey):
         else:
             return simplifyMultiPolygon([region['geometry']['coordinates']])
 
+
 def iso3166_1Boundary(regionCode):
     downloadIso3166File(ISO3166_1_URL, f"iso3166-1-boundaries.geojson-{ISO3166_1_VERSION}.zip")
     return iso3166Boundary(regionCode, iso3166FilePath('iso3166-1-boundaries.geojson'), 'ISO3166-1')
+
 
 def iso3166_2Boundary(regionCode):
     downloadIso3166File(ISO3166_2_URL, f"iso3166-2-boundaries.geojson-{ISO3166_2_VERSION}.zip")
     return iso3166Boundary(regionCode, iso3166FilePath('iso3166-2-boundaries.geojson'), 'ISO3166-2')
 
-#
+
 # Process Transport API files and fill in missing coverage area polygons
-#
 apiData = json.loads(open(arguments.filename, 'r').read())
 for covAreaType in apiData['coverage']:
     coverage = apiData['coverage'][covAreaType]
@@ -178,4 +185,4 @@ for covAreaType in apiData['coverage']:
         apiData['coverage'][covAreaType] = coverage
 
 with open(arguments.filename, 'w') as f:
-    f.write(json.dumps(apiData, indent = 2))
+    f.write(json.dumps(apiData, indent=2))
