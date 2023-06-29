@@ -11,7 +11,8 @@ import json
 import os
 import re
 
-parser = argparse.ArgumentParser(description='Generates a GeoJSON document from coverage areas of the Transport API Repository')
+parser = argparse.ArgumentParser(
+    description='Generates a GeoJSON document from coverage areas of the Transport API Repository')
 parser.add_argument('--data', type=str, required=True, help='Path to the Transport API data')
 arguments = parser.parse_args()
 
@@ -31,7 +32,7 @@ for transportApiFile in transportApiFiles:
         name = os.path.splitext(os.path.basename(transportApiFile))[0]
 
     for cov in ['anyCoverage', 'regularCoverage', 'realtimeCoverage']:
-        if not 'coverage' in j or not cov in j['coverage'] or not 'area' in j['coverage'][cov]:
+        if 'coverage' not in j or cov not in j['coverage'] or 'area' not in j['coverage'][cov]:
             continue
         properties = {}
         properties['name'] = name + '-' + cov

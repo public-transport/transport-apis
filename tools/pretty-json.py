@@ -15,11 +15,11 @@ arguments = parser.parse_args()
 # read as JSON and normalize to standard formatting
 with open(arguments.filename, 'r') as f:
     j = json.loads(f.read())
-s = json.dumps(j, indent = 2)
+s = json.dumps(j, indent=2)
 
 # fold arrays of scalar values into one line
-s = re.sub(r'\[\n +(\"[A-Za-z-]+\"|[\d\.-]+)', r'[\1', s)
-s = re.sub(r',\n +(\"[A-Za-z-]+\"|[\d\.-]+)(?=[,\n])', r', \1', s)
+s = re.sub(r'\[\n +(\"[A-Za-z-]+\"|[\d.-]+)', r'[\1', s)
+s = re.sub(r',\n +(\"[A-Za-z-]+\"|[\d.-]+)(?=[,\n])', r', \1', s)
 s = re.sub(r'(?<![,\]}])\n +](\n|,\n)', r']\1', s)
 
 # output
