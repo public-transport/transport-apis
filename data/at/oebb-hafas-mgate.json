@@ -24,7 +24,7 @@
     }
   },
   "options": {
-    "endpoint": "http://fahrplan.oebb.at/bin/mgate.exe",
+    "endpoint": "https://fahrplan.oebb.at/bin/mgate.exe",
     "client": {
       "type": "IPH",
       "id": "OEBB",
