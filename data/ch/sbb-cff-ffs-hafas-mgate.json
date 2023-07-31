@@ -22,7 +22,7 @@
     }
   },
   "options": {
-    "endpoint": "http://fahrplan.sbb.ch/bin/mgate.exe",
+    "endpoint": "https://fahrplan.sbb.ch/bin/mgate.exe",
     "client": {
       "type": "AND",
       "id": "DBZUGRADARNETZ",
