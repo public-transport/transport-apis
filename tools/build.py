@@ -32,6 +32,5 @@ for transportApiFile in transportApiFiles:
     args += [transportApiFile]
     os.system(os.path.join(os.path.dirname(__file__), 'fill-coverage-area.py') + ' ' + ' '.join(args))
     os.system(os.path.join(os.path.dirname(__file__), 'pretty-json.py') + ' ' + transportApiFile)
-    break
 
 os.system(os.path.join(os.path.dirname(__file__), 'coverage-to-geojson.py') + ' --data ' + arguments.data + ' > coverage.geojson')
