@@ -9,12 +9,13 @@ import argparse
 import json
 import math
 import os
+import pyclipper
 import requests
 import zipfile
 
 parser = argparse.ArgumentParser(description='Fill in missing coverage area based on coverage regions')
 parser.add_argument('filename')
-parser.add_argument('--threshold', type=float, default=10000.0, help='Path simplification threshold (in meter)')
+parser.add_argument('--threshold', type=float, default=5000.0, help='Path simplification threshold (in meter)')
 parser.add_argument('--decimals', type=int, default=2, help='Number of decimals in coordinate output')
 parser.add_argument('--bounding-box', type=float, nargs=4, help='Geographic bounding box filter (e.g. to exclude overseas territories) - minlat minlon maxlat maxlon')
 # to exclude e.g.FR overseas territories: 36.5 -9 71 40
@@ -125,17 +126,48 @@ def simplifyRing(ring):
         ring = [bbox[0], [bbox[1][0], bbox[0][1]], bbox[1], [bbox[0][0], bbox[1][1]], bbox[0]]
     else:
         print(f"polygon simplification dropped {ring_length - len(ring)} of {ring_length} points")
-    for coordinate in ring:
-        coordinate[0] = round(coordinate[0], arguments.decimals)
-        coordinate[1] = round(coordinate[1], arguments.decimals)
     return ring
 
+# Apply polygon offset (specified in meters) to the given ring
+def offsetRing(ring, offset):
+    # Clipper uses integer coordinates, so scale everything to the OSM-typcial 100 nano-degree
+    CLIPPER_SCALE = 10000000
 
+    bbox = boundingBox(ring)
+    latCenter = (bbox[0][1] + bbox[1][1]) / 2.0
+    bboxWidth = distance([bbox[0][0], latCenter], [bbox[1][0], latCenter])
+    clipperOffset = ((bbox[1][0] - bbox[0][0]) / bboxWidth) * offset * CLIPPER_SCALE
+
+    pc = pyclipper.PyclipperOffset()
+    pc.AddPath(pyclipper.scale_to_clipper(ring, CLIPPER_SCALE), pyclipper.JT_MITER, pyclipper.ET_CLOSEDPOLYGON)
+    result = pyclipper.scale_from_clipper(pc.Execute(clipperOffset), CLIPPER_SCALE)[0]
+    if len(result) > 0:
+        result.append(result[0]) # Clipper doesn't return closed polygons, but GeoJSON expects those
+    return result
+
+# Round coordinates in the given ring
+def roundCoordinates(ring, decimals):
+    for coordinate in ring:
+        coordinate[0] = round(coordinate[0], decimals)
+        coordinate[1] = round(coordinate[1], decimals)
+    return ring
+
+# Simplify a polygon, using the following approach:
+# - Apply the Douglas-Peucker algorithm to remove points within arguments.threshold
+# - Offset the outer ring by arguments.threshold to ensure we still cover the original polygon completely
+# - Offset all inner rings by -arugments.threshold for the same reason
 def simplifyMultiPolygon(multiPoly):
     for i in range(0, len(multiPoly)):
-        for j in range(0, len(multiPoly[i])):
+        # outer ring
+        multiPoly[i][0] = simplifyRing(multiPoly[i][0])
+        if not multiPoly[i][0]:
+            continue
+        multiPoly[i][0] = offsetRing(multiPoly[i][0], arguments.threshold)
+        # inner rings
+        for j in range(1, len(multiPoly[i])):
             multiPoly[i][j] = simplifyRing(multiPoly[i][j])
-        multiPoly[i] = [ring for ring in multiPoly[i] if ring]
+            offsetRing(multiPoly[i][0], -arguments.threshold)
+        multiPoly[i] = [roundCoordinates(ring, arguments.decimals) for ring in multiPoly[i] if ring]
     multiPoly = [poly for poly in multiPoly if poly]
     return multiPoly
 

@@ -13,3 +13,5 @@ What's in here:
   appropriate for the use here.
 
 Running `build.py` will run all of the above.
+
+The necessary dependencies can be installed using `pip install -r requirements.txt`.
