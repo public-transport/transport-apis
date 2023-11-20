@@ -161,6 +161,7 @@ def simplifyMultiPolygon(multiPoly):
         # outer ring
         multiPoly[i][0] = simplifyRing(multiPoly[i][0])
         if not multiPoly[i][0]:
+            multiPoly[i] = None
             continue
         multiPoly[i][0] = offsetRing(multiPoly[i][0], arguments.threshold)
         # inner rings
