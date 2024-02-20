@@ -6,3 +6,4 @@ To sign up the collected Links are provided.
 
 - [bwegt](https://www.mobidata-bw.de/dataset/trias)
 - [Verkehrsverbund Rhein-Neckar (VRN)](https://www.vrn.de/opendata/API)
+- [API zur VVO Fahrplanauskunft](https://www.govdata.de/daten/-/details/api-fahrplanauskunft-vvo) official TRIAS API for Sachsen, operated by VVO. No key required. Appears to be a MENTZ implementation of TRIAS.
