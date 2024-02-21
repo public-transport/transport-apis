@@ -1,0 +1,31 @@
+{
+    "name": "vvo",
+    "coverage": {
+        "realtimeCoverage": {
+            "area": {
+                "coordinates": [
+                    [[11.756,50.472],[11.774,50.633],[11.964,50.763],[12.092,50.75],[12.139,50.895],[12.26,50.959],[12.084,51.066],[12.015,51.297],[12.027,51.521],[12.206,51.696],[13.008,51.804],[13.235,51.709],[13.334,51.572],[13.728,51.503],[13.909,51.524],[14.108,51.675],[14.715,51.732],[15.041,51.571],[15.169,51.318],[15.103,51.023],[14.859,50.702],[14.679,50.694],[14.487,50.808],[13.893,50.598],[13.646,50.582],[13.523,50.48],[12.973,50.272],[12.598,50.27],[12.376,50.043],[12.243,50.05],[12.103,50.182],[11.898,50.24],[11.756,50.472]]
+                ],
+                "type": "Polygon"
+            },
+            "region": [ "DE-SN" ]
+        },
+        "regularCoverage": {
+      		"region": ["DE"]
+    	}
+    },
+    "options": {
+        "endpoint": "http://efa.vvo-online.de:8080/std3/trias",
+        "isTestingEndpoint": false,
+        "triasVersion": 1.1,
+        "requestContentType": "text/xml",
+        "requiresSignUp": false,
+        "requiresContract": false,
+        "providedServices": ["TripRequest", "StopEventRequest", "LocationInformationRequest"]
+    },
+    "supportedLanguages": [ "en", "de" ],
+    "timezone": "Europe/Berlin",
+    "type": {
+        "trias": true
+    }
+}
