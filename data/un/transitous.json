@@ -1,0 +1,51 @@
+{
+  "name": "Tansitous open public transport routing",
+  "coverage": {
+    "realtimeCoverage": {
+      "region": [
+        "BE",
+        "CH",
+        "NL"
+      ]
+    },
+    "regularCoverage": {
+      "region": [
+        "DE",
+        "DK",
+        "EE",
+        "GB",
+        "IE",
+        "LT",
+        "LU",
+        "LV",
+        "NO",
+        "PL",
+        "SE"
+      ]
+    },
+    "anyCoverage": {
+      "region": [
+        "AT",
+        "AU-NSW",
+        "CA",
+        "ES",
+        "FR",
+        "IT",
+        "US-CO",
+        "US-IL",
+        "US-MO",
+        "US-OR"
+      ]
+    }
+  },
+  "options": {
+    "endpoint": "https://routing.spline.de/api/",
+    "intermodal": false,
+    "motisVersion": "0.10.24",
+    "supportedModes": []
+  },
+  "supportedLanguages": [],
+  "type": {
+    "motis": true
+  }
+}
