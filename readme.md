@@ -289,6 +289,8 @@ The following properties are defined:
 The following properties are defined:
 * `endpoint`: Base URL for the API
 * `motisVersion`: version of the [motis-server](https://github.com/motis-project/motis/releases)
+* `supportedModes`: A list of [individual transport modes](https://motis-project.de/docs/api/endpoint/intermodal.html#modes) supported
+in intermodal routing requests (e.g. `FootPPR`, `Bike`, `Car`, `CarParking`).
 
 ## Contributing
 
