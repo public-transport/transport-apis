@@ -316,7 +316,7 @@
       }
     },
     "regularCoverage": {
-      "region": ["DE", "DK", "EE", "GB", "IE", "LT", "LU", "LV", "NO", "PL", "SE"],
+      "region": ["DE", "DK", "EE", "FI", "GB", "HU", "IE", "LT", "LU", "LV", "NO", "PL", "SE"],
       "area": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -2021,7 +2021,7 @@
       }
     },
     "anyCoverage": {
-      "region": ["AT", "AU-NSW", "CA", "ES", "FR", "IT", "US-CO", "US-IL", "US-MO", "US-OR"],
+      "region": ["AT", "AU-NSW", "CA", "ES", "FR", "HK", "HR", "IS", "IT", "SI", "SK", "US-CA", "US-CO", "US-GA", "US-IL", "US-MO", "US-OH", "US-OR", "US-RI"],
       "area": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -4327,7 +4327,7 @@
   "options": {
     "endpoint": "https://routing.spline.de/api/",
     "intermodal": false,
-    "motisVersion": "0.10.24",
+    "motisVersion": "0.10.27",
     "supportedModes": []
   },
   "supportedLanguages": [],
