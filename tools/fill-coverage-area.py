@@ -211,6 +211,18 @@ for covAreaType in apiData['coverage']:
         if p:
             multiPolygon += p
 
+    # unite adjacent/overlapping polygons
+    if len(multiPolygon) > 1:
+        # Clipper uses integer coordinates, so scale everything to the OSM-typcial 100 nano-degree
+        CLIPPER_SCALE = 10000000
+        pc = pyclipper.Pyclipper()
+        for poly in multiPolygon:
+            pc.AddPaths(pyclipper.scale_to_clipper(poly, CLIPPER_SCALE), pyclipper.PT_SUBJECT, True)
+        multiPolygon = []
+        for poly in pyclipper.scale_from_clipper(pc.Execute(pyclipper.CT_UNION, pyclipper.PFT_NONZERO, pyclipper.PFT_NONZERO), CLIPPER_SCALE):
+            poly.append(poly[0]) # close polygons as expected by GeoJSON
+            multiPolygon += [[poly]]
+
     if multiPolygon:
         area = {}
         area['type'] = 'MultiPolygon'
