@@ -1971,7 +1971,8 @@
   },
   "options": {
     "endpoint": "https://europe.motis-project.de/",
-    "motisVersion": "0.10.0"
+    "motisVersion": "0.10.0",
+    "supportedModes": [ "FootPPR", "Bike", "Car", "CarParking" ]
   },
   "supportedLanguages": [
     "en"

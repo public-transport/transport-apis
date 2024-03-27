@@ -19,6 +19,7 @@ parser.add_argument('--threshold', type=float, default=5000.0, help='Path simpli
 parser.add_argument('--decimals', type=int, default=2, help='Number of decimals in coordinate output')
 parser.add_argument('--bounding-box', type=float, nargs=4, help='Geographic bounding box filter (e.g. to exclude overseas territories) - minlat minlon maxlat maxlon')
 # to exclude e.g.FR overseas territories: 36.5 -9 71 40
+parser.add_argument('--force', default=False, help='Regenerate coverage area even if already present', action='store_true')
 arguments = parser.parse_args()
 
 #
@@ -198,7 +199,7 @@ def iso3166_2Boundary(regionCode):
 apiData = json.loads(open(arguments.filename, 'r').read())
 for covAreaType in apiData['coverage']:
     coverage = apiData['coverage'][covAreaType]
-    if 'area' in coverage:
+    if 'area' in coverage and not arguments.force:
         continue
 
     multiPolygon = []
@@ -209,6 +210,18 @@ for covAreaType in apiData['coverage']:
             p = iso3166_2Boundary(region)
         if p:
             multiPolygon += p
+
+    # unite adjacent/overlapping polygons
+    if len(multiPolygon) > 1:
+        # Clipper uses integer coordinates, so scale everything to the OSM-typcial 100 nano-degree
+        CLIPPER_SCALE = 10000000
+        pc = pyclipper.Pyclipper()
+        for poly in multiPolygon:
+            pc.AddPaths(pyclipper.scale_to_clipper(poly, CLIPPER_SCALE), pyclipper.PT_SUBJECT, True)
+        multiPolygon = []
+        for poly in pyclipper.scale_from_clipper(pc.Execute(pyclipper.CT_UNION, pyclipper.PFT_NONZERO, pyclipper.PFT_NONZERO), CLIPPER_SCALE):
+            poly.append(poly[0]) # close polygons as expected by GeoJSON
+            multiPolygon += [[poly]]
 
     if multiPolygon:
         area = {}
