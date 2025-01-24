@@ -16,7 +16,7 @@
         }
     },
     "options": {
-        "endpoint": "https://api.entur.io/journey-planner/v2/graphql/",
+        "endpoint": "https://api.entur.io/journey-planner/v3/graphql/",
         "apiVersion": "entur"
     },
     "supportedLanguages": [ "no" ],
