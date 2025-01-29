@@ -14,7 +14,7 @@
         }
     },
     "options": {
-        "endpoint": "https://api.digitransit.fi/routing/v1/routers/hsl/",
+        "endpoint": "https://api.digitransit.fi/routing/v2/hsl/gtfs/v1",
         "supportedTransitModes": [ "TRANSIT" ]
     },
     "supportedLanguages": [ "de", "en", "fi", "fr", "sv" ],
