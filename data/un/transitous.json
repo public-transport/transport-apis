@@ -1734,7 +1734,7 @@
     },
     "anyCoverage": {
       "region": ["AL", "AT", "AU", "BA", "BG", "BR-RS", "BR-RJ", "CA", "CO-DC", "CY", "CZ", "ES", "ET-AA", "FR", "GR", "HK", "HR", "ID-JK", "IS", "IT",
-        " JP-13",
+        "JP-13",
         "JP-34", "LT", "LV", "ME", "MX-MEX",
         "MY-01",
         "MY-02",
