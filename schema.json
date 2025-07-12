@@ -36,8 +36,8 @@
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^[a-z][a-z]$",
-        "description": "ISO-639-1 language code"
+        "pattern": "^[a-z]{2,3}$",
+        "description": "ISO-639-1/2/3 language code"
       }
     },
     "coverage": {
