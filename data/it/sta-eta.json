@@ -14,7 +14,7 @@
     "options": {
         "endpoint": "https://mobility.api.opendatahub.com/v2/",
         "supportedOutputFormats": [ "XML" ],
-        "xmlOutputFormat": "compact"
+        "xmlOutputFormat": "full"
     },
     "attribution": {
       "name": "Südtiroler Transportstrukturen AG",
