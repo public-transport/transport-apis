@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transport API Repository coverage map</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js'></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+        .maplibregl-popup {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    const map = new maplibregl.Map({
+        container: 'map',
+        style: {
+            version: 8,
+            sources: {
+                bg: {
+                    attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>',
+                    type: 'raster',
+                    tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+                    tileSize: 256,
+                    minzoom: 0,
+                    maxzoom: 19
+                },
+                coverage: {
+                    type: 'geojson',
+                    data: 'coverage.geojson'
+                }
+            },
+            layers: [
+                {
+                    id: 'background',
+                    type: 'raster',
+                    source: 'bg'
+                },
+                {
+                    id: 'coverage-layer',
+                    type: 'fill',
+                    source: 'coverage',
+                    paint: {
+                        'fill-color': ['match', ['get', 'coverage'], ['realtimeCoverage'], '#27ae60', ['regularCoverage'], '#f67400', '#da4453'],
+                        'fill-opacity': 0.2,
+                        'fill-outline-color': ['match', ['get', 'coverage'], ['realtimeCoverage'], '#27ae60', ['regularCoverage'], '#f67400', '#da4453'],
+                    }
+                }
+            ]
+        },
+        center: [0, 0],
+        zoom: 1
+    });
+
+    map.on('load', () => {
+        map.on('click', 'coverage-layer', (e) => {
+            const names = []
+            const compareFn = (lhs, rhs) => {
+                if (lhs.properties.coverage === rhs.properties.coverage)
+                    return lhs.properties.source < rhs.properties.source ? -1 : 1;
+                if (lhs.properties.coverage === 'realtimeCoverage')
+                    return -1;
+                if (rhs.properties.coverage === 'realtimeCoverage')
+                    return 1;
+                return lhs.properties.coverage > rhs.properties.coverage ? -1 : 1;
+            };
+            let features = e.features;
+            features = features.sort(compareFn);
+
+            for (feature of features)
+                names.push(feature.properties.name)
+            new maplibregl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(names.join('<br/>'))
+                .addTo(map);
+        });
+
+        map.on('mouseenter', 'coverage-layer', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        map.on('mouseleave', 'coverage-layer', () => {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+</script>
+</body>
+</html>

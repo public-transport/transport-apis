@@ -36,6 +36,8 @@ for transportApiFile in transportApiFiles:
             continue
         properties = {}
         properties['name'] = name + '-' + cov
+        properties['coverage'] = cov
+        properties['source'] = name
         feature = {}
         feature['type'] = 'Feature'
         feature['properties'] = properties
