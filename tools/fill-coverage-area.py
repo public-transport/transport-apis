@@ -230,8 +230,12 @@ for covAreaType in apiData['coverage']:
 
     if multiPolygon:
         area = {}
-        area['type'] = 'MultiPolygon'
-        area['coordinates'] = multiPolygon
+        if len(multiPolygon) == 1:
+            area['type'] = 'Polygon'
+            area['coordinates'] = multiPolygon[0]
+        else:
+            area['type'] = 'MultiPolygon'
+            area['coordinates'] = multiPolygon
         coverage['area'] = area
         apiData['coverage'][covAreaType] = coverage
 
