@@ -19,7 +19,7 @@
     }
   },
   "options": {
-    "endpoint": "https://nah.sh.hafas.de/bin/mgate.exe",
+    "endpoint": "https://nahsh.hafas.cloud/gate",
     "client": {
       "id": "NAHSH",
       "name": "NAHSHPROD",
