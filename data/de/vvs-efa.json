@@ -7,7 +7,7 @@
         }
     },
     "options": {
-        "endpoint": "https://www2.vvs.de/vvs/",
+        "endpoint": "https://www3.vvs.de/vvs/",
         "supportedOutputFormats": [ "XML", "JSON" ],
         "xmlOutputFormat": "full"
     },
