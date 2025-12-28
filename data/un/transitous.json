@@ -212,7 +212,7 @@
       }
     },
     "regularCoverage": {
-      "region": ["BE", "BM", "DE", "DK", "EE", "FI", "GB", "HU", "IE", "IT", "KR", "LU", "NO", "PL", "RO", "SE", "SG"],
+      "region": ["BE", "BM", "DE", "DK", "EE", "FI", "GB", "HU", "IE", "IT", "KR", "LU", "NO", "PL", "RO", "SE", "SG", "SI"],
       "area": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -1928,8 +1928,8 @@
         "MY-10",
         "MY-11",
         "MY-14",
-        "MY-16", "NZ", "OM-MA", "PR", "PT", "RE", "RS", "SI", "SK", "TR",
-        "UA-46", "US", "XK"],
+        "MY-16", "NZ", "OM-MA", "PR", "PT", "RE", "RS", "SK", "TH", "TR",
+        "UA", "US", "XK"],
       "area": {
         "type": "MultiPolygon",
         "coordinates": [
