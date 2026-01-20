@@ -28,11 +28,11 @@
       "type": "IPH",
       "id": "HAFAS",
       "v": "4000000",
-      "name": "cflPROD-STORE",
-      "os": "iPhone OS 9.3.5"
+      "name": "cflPROD-STORE"
     },
-    "ver": "1.16",
+    "ver": "1.81",
     "auth": {
+      "type": "AID",
       "aid": "ALT2vl7LAFDFu2dz"
     },
     "products": [
