@@ -20,6 +20,7 @@ parser.add_argument('--region-threshold', action="append", nargs=2, help='[regio
 parser.add_argument('--decimals', type=int, default=2, help='Number of decimals in coordinate output')
 parser.add_argument('--bounding-box', type=float, nargs=4, help='Geographic bounding box filter (e.g. to exclude overseas territories) - minlat minlon maxlat maxlon')
 # to exclude e.g.FR overseas territories: 36.5 -9 71 40
+parser.add_argument('--region-bounding-box', action="append", nargs=5, help='[region] [minlat] [minlon] [maxlat] [maxlon] - per-region geographic bounding box filter')
 parser.add_argument('--force', default=False, help='Regenerate coverage area even if already present', action='store_true')
 arguments = parser.parse_args()
 
@@ -109,12 +110,25 @@ def douglasPeucker(ring, threshold):
         return [ring[0], ring[-1]]
 
 
+def is_outside(box, filterBox):
+    if not filterBox:
+        return False
+    return box[1][1] < float(filterBox[0]) or box[0][1] > float(filterBox[2]) or box[1][0] < float(filterBox[1]) or box[0][0] > float(filterBox[3])
+
+
 # Finding and simplifying boundary polygons specificially for Transport API
 def simplifyRing(regionCode, ring):
     bbox = boundingBox(ring)
-    if arguments.bounding_box and (bbox[1][1] < arguments.bounding_box[0] or bbox[0][1] > arguments.bounding_box[2] or bbox[1][0] < arguments.bounding_box[1] or bbox[0][0] > arguments.bounding_box[3]):
+    # global bounding box
+    if is_outside(bbox, arguments.bounding_box):
         print(f"dropping polygon {bbox} outside of bounding box filter")
         return []
+
+    # per-region bounding box
+    for filterBox in arguments.region_bounding_box:
+        if regionCode == filterBox[0] and is_outside(bbox, filterBox[1:]):
+            print(f"dropping polygon {bbox} outside of region bounding box filter for {regionCode}")
+            return []
 
     # deal with tiny enclaves/exclaves like Baarle "in" BE/NL
     ringSize = distance(bbox[0], bbox[1])
