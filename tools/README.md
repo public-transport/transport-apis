@@ -31,7 +31,7 @@ The necessary dependencies can be installed using `pip install -r requirements.t
   --region-threshold JP 150000 \
   --region-bounding-box FR 36.5 -9 71 40 \
   --region-bounding-box NL 36.5 -9 71 40 \
-  --region-bounding-box NO 36.5 -9 71 40 \
+  --region-bounding-box NO 36.5 0 71 40 \
   --region-bounding-box GB 36.5 -9 71 40 \
   --region-bounding-box ES 36.5 -9 71 40 \
   --region-bounding-box PT 36.5 -9 71 40 \
