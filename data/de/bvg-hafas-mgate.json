@@ -25,7 +25,7 @@
     }
   },
   "options": {
-    "endpoint": "https://bvg-apps-ext.hafas.de/bin/mgate.exe",
+    "endpoint": "https://bvg.hafas.cloud/apps/gate",
     "client": {
       "type": "WEB",
       "id": "VBB",
