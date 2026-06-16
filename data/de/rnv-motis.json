@@ -11,7 +11,7 @@
   "options": {
     "endpoint": "https://directions.nwex.de/api/providers/rhein-neckar-verkehr/",
     "intermodal": false,
-    "motisVersion": "2.0.43",
+    "motisVersion": "2.10.0",
     "supportedModes": []
   },
   "supportedLanguages": [
