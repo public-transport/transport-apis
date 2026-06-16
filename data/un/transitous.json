@@ -10005,7 +10005,11 @@
   "options": {
     "endpoint": "https://api.transitous.org/",
     "intermodal": false,
-    "motisVersion": "2.0.17",
+    "motisVersion": "2.7.6",
+    "stopTimes": {
+        "radius": 200,
+        "exactRadius": false
+    },
     "supportedModes": []
   },
   "supportedLanguages": [],
