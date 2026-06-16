@@ -1,5 +1,5 @@
 {
-  "name": "Demo Instance of MOTIS Project for a part of europe",
+  "name": "Demo Instance of MOTIS Project for a part of Europe",
   "coverage": {
     "regularCoverage": {
       "region": [
@@ -1971,7 +1971,7 @@
   },
   "options": {
     "endpoint": "https://europe.motis-project.de/",
-    "motisVersion": "0.10.0",
+    "motisVersion": "2.10.2",
     "supportedModes": [ "FootPPR", "Bike", "Car", "CarParking" ]
   },
   "supportedLanguages": [
