@@ -1,23 +1,21 @@
 {
     "name": "Trufi Cochabamba",
-    "attribution": {
-        "name": "Trufi Cochabamba",
-        "homepage": "https://www.trufi-association.org/projects/trufi-app/"
-    },
+    "type": {
+          "otpGraphQl": true
+      },
+    "supportedLanguages": [ "en" ],
     "coverage": {
-        "anyCoverage": {
-            "area": {
-                "type": "Polygon"
-            },
-            "region": [ "BO-C" ]
-        }
+          "anyCoverage": {
+              "region": [ "BO-C" ]
+          }
     },
     "options": {
-        "endpoint": "https://otp281.trufi.app/otp/transmodel/v3"
+      "endpoint": "https://otp281.trufi.app/otp/transmodel/v3"
     },
-    "supportedLanguages": [ "en" ],
-    "timezone": "America/La_Paz",
-    "type": {
-        "otpGraphQl": true
-    }
+    "attribution": {
+        "name": "Trufi Cochabamba",
+        "homepage": "https://www.trufi-association.org/projects/trufi-app/",
+        "mixedLicenses": true
+    },
+    "timezone": "America/La_Paz"
 }
