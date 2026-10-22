@@ -110,15 +110,15 @@
   "options": {
     "auth": {
       "type": "AID",
-      "aid": "wf7mcf9bv3nv8g5f"
+      "aid": "nextgen"
     },
     "client": {
-      "id": "VAO",
+      "id": "HAFAS",
       "type": "WEB",
-      "name": "webapp",
+      "name": "Routenplaner und Fahrplanauskunft | IVB",
       "l": "vs_ivb"
     },
-    "endpoint": "https://fahrplan.ivb.at/bin/mgate.exe",
+    "endpoint": "https://ivb.verkehrsauskunft.at/hamm/gate/",
     "products": [
       {
         "id": "bahn-s-bahn",
