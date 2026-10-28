@@ -23,15 +23,15 @@
   "options": {
     "auth": {
       "type": "AID",
-      "aid": "wf7mcf9bv3nv8g5f"
+      "aid": "nextgen"
     },
     "client": {
-      "id": "VAO",
+      "id": "HAFAS",
       "type": "WEB",
-      "name": "webapp",
+      "name": "VVT Routenplaner",
       "l": "vs_vvt"
     },
-    "endpoint": "https://smartride.vvt.at/bin/mgate.exe",
+    "endpoint": "https://smartride.vvt.at/hamm/gate/",
     "products": [
       {
         "id": "trains",
