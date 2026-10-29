@@ -7,7 +7,7 @@
         }
     },
     "options": {
-        "endpoint": "https://efa.mvv-muenchen.de/mobile/",
+        "endpoint": "https://efa.mvv-muenchen.de/ng/",
         "supportedOutputFormats": [ "XML", "JSON" ],
         "xmlOutputFormat": "full"
     },
