@@ -42,7 +42,7 @@ def downloadIso3166File(url, name):
     if os.path.exists(fileName):
         return
     print(f"Downloading {url}...")
-    r = requests.get(url)
+    r = requests.get(url, timeout=30)
     if r.status_code < 400:
         with open(fileName, 'wb') as f:
             f.write(r.content)
