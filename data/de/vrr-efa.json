@@ -13,6 +13,7 @@
 		"en",
 		"de"
 	],
+	"timezone": "Europe/Berlin",
 	"options": {
 		"endpoint": "https://efa.vrr.de/standard/",
 		"supportedOutputFormats": [ "XML", "JSON" ],

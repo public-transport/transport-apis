@@ -12,6 +12,7 @@
         "xmlOutputFormat": "full"
     },
     "supportedLanguages": [ "de", "en" ],
+    "timezone": "Europe/Berlin",
     "type": {
         "efa": true
     }
