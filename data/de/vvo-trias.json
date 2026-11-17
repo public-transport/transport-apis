@@ -15,9 +15,9 @@
     	}
     },
     "options": {
-        "endpoint": "http://efa.vvo-online.de:8080/std3/trias",
+        "endpoint": "https://efa.vvo-online.de/std3/trias",
         "isTestingEndpoint": false,
-        "triasVersion": 1.1,
+        "triasVersion": 1.2,
         "requestContentType": "text/xml",
         "requiresSignUp": false,
         "requiresContract": false,
